@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>시스템동바리 구조계산 사용자 매뉴얼 - HJ구조&가설파트너 v1.00</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* 텍스트 선택 방지 */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            /* 드래그 방지 */
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+        }
+        
+        /* 인쇄 시에만 선택 가능 */
+        @media print {
+            * {
+                -webkit-user-select: auto !important;
+                -moz-user-select: auto !important;
+                -ms-user-select: auto !important;
+                user-select: auto !important;
+            }
+        }
+        
+        :root {
+            --primary-color: #00a652;
+            --primary-dark: #008a43;
+            --primary-light: #e8f5ed;
+            --secondary-color: #2c3e50;
+            --text-primary: #2c3e50;
+            --text-secondary: #6c757d;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --border-color: #e9ecef;
+            --warning-bg: #fff8e1;
+            --warning-border: #ffc107;
+            --info-bg: #e3f2fd;
+            --info-border: #2196f3;
+            --tip-bg: #f3e5f5;
+            --tip-border: #9c27b0;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background-color: var(--bg-secondary);
+            font-weight: 400;
+            position: relative;
+        }
+        
+        /* 워터마크 */
+        body::before {
+            content: "© 2025 HJ구조&가설파트너";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 120px;
+            color: rgba(0, 166, 82, 0.03);
+            z-index: -1;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        
+        /* 보안 경고 모달 */
+        .security-alert {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #00a652;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 10000;
+            text-align: center;
+            animation: shake 0.5s;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            25% { transform: translate(-48%, -50%) rotate(-1deg); }
+            75% { transform: translate(-52%, -50%) rotate(1deg); }
+        }
+        
+        /* 복사 방지 알림 */
+        .copy-protection-notice {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 166, 82, 0.9);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 1000;
+            display: none;
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--bg-primary);
+            box-shadow: 0 0 30px rgba(0,0,0,0.05);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "🏗️";
+            position: absolute;
+            right: -50px;
+            top: -50px;
+            font-size: 200px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+        
+        .header h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            font-weight: 300;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 2em;
+            font-weight: 700;
+            margin: 50px 0 25px 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-light);
+            position: relative;
+        }
+        
+        h2:before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 35px 0 15px 0;
+        }
+        
+        h4 {
+            color: var(--text-primary);
+            font-size: 1.2em;
+            font-weight: 500;
+            margin: 25px 0 12px 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .toc {
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .toc h2 {
+            border: none;
+            margin: 0 0 20px 0;
+            padding: 0;
+            font-size: 1.6em;
+        }
+        
+        .toc h2:before {
+            display: none;
+        }
+        
+        .toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+        }
+        
+        .toc li {
+            counter-increment: toc-counter;
+            margin: 12px 0;
+            position: relative;
+            padding-left: 35px;
+        }
+        
+        .toc li:before {
+            content: counter(toc-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: var(--primary-color);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .toc a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .toc a:hover {
+            color: var(--primary-color);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 500;
+            font-size: 0.95em;
+            letter-spacing: 0.5px;
+        }
+        
+        td {
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+        
+        tr:nth-child(even) td {
+            background-color: var(--bg-secondary);
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .feature-list li {
+            padding: 12px 0 12px 40px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .feature-list li strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .warning-box, .info-box, .tip-box {
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            position: relative;
+            padding-left: 60px;
+        }
+        
+        .warning-box:before, .info-box:before, .tip-box:before {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+        }
+        
+        .warning-box {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            border-left: 4px solid var(--warning-border);
+        }
+        
+        .warning-box:before {
+            content: "⚠️";
+        }
+        
+        .warning-box strong {
+            color: #f57c00;
+        }
+        
+        .info-box {
+            background-color: var(--info-bg);
+            border: 1px solid var(--info-border);
+            border-left: 4px solid var(--info-border);
+        }
+        
+        .info-box:before {
+            content: "ℹ️";
+        }
+        
+        .info-box strong {
+            color: #1976d2;
+        }
+        
+        .tip-box {
+            background-color: var(--tip-bg);
+            border: 1px solid var(--tip-border);
+            border-left: 4px solid var(--tip-border);
+        }
+        
+        .tip-box:before {
+            content: "💡";
+        }
+        
+        .tip-box strong {
+            color: #7b1fa2;
+        }
+        
+        .code-block {
+            background-color: #f6f8fa;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.95em;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #f0f9f4 100%);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(0, 166, 82, 0.1);
+        }
+        
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: var(--text-primary);
+        }
+        
+        .contact-info strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+        
+        .footer {
+            background-color: var(--bg-secondary);
+            text-align: center;
+            padding: 50px 40px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer .warning-box {
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .footer p {
+            color: var(--text-secondary);
+            font-size: 0.95em;
+        }
+        
+        /* 저작권 표시 */
+        .copyright-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 166, 82, 0.9);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 1000;
+        }
+        
+        /* 인쇄 시 워터마크 */
+        @media print {
+            body::after {
+                content: "HJ구조&가설파트너 정품 문서 | 무단 복제 금지";
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+                font-size: 60px;
+                color: rgba(0, 166, 82, 0.15);
+                z-index: 9999;
+                white-space: nowrap;
+            }
+        }
+        
+        /* FAQ 스타일 */
+        .faq-item {
+            margin: 30px 0;
+            padding: 25px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .faq-item strong {
+            color: var(--primary-color);
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        /* 버튼 스타일 */
+        .button-example {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 166, 82, 0.2);
+        }
+        
+        .button-example:hover {
+            background-color: var(--primary-dark);
+            box-shadow: 0 4px 10px rgba(0, 166, 82, 0.3);
+            transform: translateY(-1px);
+        }
+        
+        /* 스크롤 시 부드러운 이동 */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* 선택 영역 색상 */
+        ::selection {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+        }
+        
+        /* 링크 스타일 */
+        a {
+            color: var(--primary-color);
+            transition: opacity 0.3s;
+        }
+        
+        a:hover {
+            opacity: 0.8;
+        }
+        
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+            
+            h3 {
+                font-size: 1.3em;
+            }
+            
+            table {
+                font-size: 0.9em;
+            }
+            
+            th, td {
+                padding: 10px;
+            }
+            
+            .toc {
+                padding: 20px;
+            }
+        }
+    </style>
+    
+    <script>
+        // 보안 기능
+        (function() {
+            // 우클릭 방지
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                showSecurityAlert('우클릭이 제한되어 있습니다.');
+                return false;
+            });
+            
+            // 텍스트 선택 방지
+            document.addEventListener('selectstart', function(e) {
+                if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // 드래그 방지
+            document.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // 복사 방지
+            document.addEventListener('copy', function(e) {
+                e.preventDefault();
+                showCopyProtection();
+                return false;
+            });
+            
+            // 잘라내기 방지
+            document.addEventListener('cut', function(e) {
+                e.preventDefault();
+                showCopyProtection();
+                return false;
+            });
+            
+            // 개발자 도구 감지
+            let devtools = {open: false, orientation: null};
+            const threshold = 160;
+            const emitEvent = (state) => {
+                if (state) {
+                    document.body.innerHTML = `
+                        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #00a652; color: white; font-size: 24px; text-align: center;">
+                            <div>
+                                <h1>⚠️ 보안 경고</h1>
+                                <p>개발자 도구 사용이 감지되었습니다.</p>
+                                <p>본 문서는 저작권으로 보호되고 있습니다.</p>
+                                <p>© 2025 HJ구조&가설파트너</p>
+                                <p style="margin-top: 20px;">
+                                    <button onclick="location.reload()" style="padding: 10px 30px; font-size: 16px; cursor: pointer; background: white; color: #00a652; border: none; border-radius: 5px;">
+                                        페이지 새로고침
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                }
+            };
+            
+            setInterval(() => {
+                if (window.outerHeight - window.innerHeight > threshold || 
+                    window.outerWidth - window.innerWidth > threshold) {
+                    if (!devtools.open) {
+                        emitEvent(true);
+                        devtools.open = true;
+                    }
+                } else {
+                    devtools.open = false;
+                }
+            }, 500);
+            
+            // 키보드 단축키 차단
+            document.addEventListener('keydown', function(e) {
+                // F12
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                    showSecurityAlert('개발자 도구가 차단되었습니다.');
+                    return false;
+                }
+                
+                // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+                if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) {
+                    e.preventDefault();
+                    showSecurityAlert('개발자 도구가 차단되었습니다.');
+                    return false;
+                }
+                
+                // Ctrl+U (소스보기)
+                if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                    showSecurityAlert('소스 보기가 차단되었습니다.');
+                    return false;
+                }
+                
+                // Ctrl+S (저장)
+                if (e.ctrlKey && e.key === 's') {
+                    e.preventDefault();
+                    showSecurityAlert('저장이 차단되었습니다.');
+                    return false;
+                }
+                
+                // Ctrl+A (전체선택)
+                if (e.ctrlKey && e.key === 'a') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Ctrl+C (복사)
+                if (e.ctrlKey && e.key === 'c') {
+                    e.preventDefault();
+                    showCopyProtection();
+                    return false;
+                }
+                
+                // Ctrl+X (잘라내기)
+                if (e.ctrlKey && e.key === 'x') {
+                    e.preventDefault();
+                    showCopyProtection();
+                    return false;
+                }
+            });
+            
+            // 보안 경고 표시
+            function showSecurityAlert(message) {
+                const alert = document.getElementById('securityAlert') || createSecurityAlert();
+                alert.textContent = message;
+                alert.style.display = 'block';
+                
+                setTimeout(() => {
+                    alert.style.display = 'none';
+                }, 3000);
+            }
+            
+            function createSecurityAlert() {
+                const alert = document.createElement('div');
+                alert.id = 'securityAlert';
+                alert.className = 'security-alert';
+                document.body.appendChild(alert);
+                return alert;
+            }
+            
+            // 복사 방지 알림
+            function showCopyProtection() {
+                const notice = document.getElementById('copyNotice') || createCopyNotice();
+                notice.style.display = 'block';
+                
+                setTimeout(() => {
+                    notice.style.display = 'none';
+                }, 3000);
+            }
+            
+            function createCopyNotice() {
+                const notice = document.createElement('div');
+                notice.id = 'copyNotice';
+                notice.className = 'copy-protection-notice';
+                notice.innerHTML = '⚠️ 이 문서는 저작권으로 보호됩니다.<br>무단 복제가 금지되어 있습니다.';
+                document.body.appendChild(notice);
+                return notice;
+            }
+            
+            // 콘솔 경고 메시지
+            console.log('%c⚠️ 경고!', 'color: red; font-size: 50px; font-weight: bold;');
+            console.log('%c이 문서는 저작권으로 보호됩니다.', 'color: red; font-size: 20px;');
+            console.log('%c무단 복제 및 수정 시 법적 조치를 받을 수 있습니다.', 'color: red; font-size: 16px;');
+            console.log('%c© 2025 HJ구조&가설파트너. All rights reserved.', 'color: #00a652; font-size: 16px; font-weight: bold;');
+            
+            // 타이틀 변경 방지
+            const originalTitle = '시스템동바리 구조계산 사용자 매뉴얼 - HJ구조&가설파트너 v1.00';
+            setInterval(() => {
+                if (document.title !== originalTitle) {
+                    document.title = originalTitle;
+                }
+            }, 1000);
+        })();
+    </script>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <!-- 보안 경고 -->
+    <div id="securityAlert" class="security-alert"></div>
+    
+    <!-- 복사 방지 알림 -->
+    <div id="copyNotice" class="copy-protection-notice"></div>
+    
+    <!-- 저작권 표시 -->
+    <div class="copyright-badge">
+        © 2025 HJ구조&가설파트너
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>시스템동바리 구조계산 사용자 매뉴얼</h1>
+            <p class="subtitle">HJ구조&가설파트너 v1.00</p>
+        </div>
+        
+        <div class="content">
+            <div class="toc">
+                <h2>📋 목차</h2>
+                <ol>
+                    <li><a href="#section1">프로그램 소개</a></li>
+                    <li><a href="#section2">시작하기</a></li>
+                    <li><a href="#section3">주요 기능</a></li>
+                    <li><a href="#section4">구조물 타입별 사용법</a></li>
+                    <li><a href="#section5">고급 기능</a></li>
+                    <li><a href="#section6">보고서 및 출력</a></li>
+                    <li><a href="#section7">문제 해결</a></li>
+                    <li><a href="#section8">문의 및 지원</a></li>
+                </ol>
+            </div>
+            
+            <div id="section1" class="section">
+                <h2>프로그램 소개</h2>
+                
+                <h3>개요</h3>
+                <p>시스템동바리 구조계산 프로그램은 건설 현장에서 사용되는 시스템 동바리의 구조 안전성을 자동으로 계산하는 웹 기반 프로그램입니다.</p>
+                
+                <h3>주요 특징</h3>
+                <ul class="feature-list">
+                    <li><strong>실시간 자동 계산</strong> 입력값 변경 시 즉시 구조계산 수행</li>
+                    <li><strong>다중 구조물 지원</strong> 슬래브, 일반 보, 데크 보 동시 계산</li>
+                    <li><strong>3D 시각화</strong> 구조물의 3차원 모델링 제공</li>
+                    <li><strong>보고서 자동 생성</strong> 참고용 구조계산서 즉시 출력</li>
+                </ul>
+                
+                <h3>지원 구조물</h3>
+                <ol>
+                    <li><strong>슬래브</strong> - 100~3500mm 두께</li>
+                    <li><strong>일반 보</strong> - 300×300 ~ 1200×2000mm</li>
+                    <li><strong>데크 보</strong> - 데크슬래브 포함 보 구조</li>
+                </ol>
+                
+                <div class="info-box">
+                    <strong>참고사항</strong><br>
+                    본 프로그램의 모든 계산 결과 및 권장 수치는 <strong>참고용</strong>입니다.<br>
+                    실제 적용 시에는 현장 조건을 고려하여 적절히 조정하시기 바랍니다.
+                </div>
+                
+                <div class="warning-box">
+                    <strong>중요 안내사항</strong><br>
+                    본 프로그램은 <strong>참고용</strong>이며, 현장 적용 시 반드시 <strong>구조기술사의 검토</strong>가 필요합니다.
+                </div>
+            </div>
+            
+            <div id="section2" class="section">
+                <h2>시작하기</h2>
+                
+                <h3>프로그램 실행</h3>
+                <ol>
+                    <li>웹 브라우저에서 프로그램 파일 실행</li>
+                    <li>Chrome, Edge, Firefox 등 최신 브라우저 권장</li>
+                </ol>
+                
+                <h3>초기 화면</h3>
+                <div class="info-box">
+                    <strong>구조 타입 선택</strong>
+                    <ul style="margin-top: 15px; list-style: none;">
+                        <li style="padding: 5px 0;">🏢 <strong>슬래브</strong> - 바닥 슬래브 구조</li>
+                        <li style="padding: 5px 0;">🏗️ <strong>일반 보</strong> - 표준 보 구조</li>
+                        <li style="padding: 5px 0;">🏭 <strong>데크 보</strong> - 데크플레이트가 있는 보 구조</li>
+                    </ul>
+                </div>
+                
+                <h3>인터페이스 구성</h3>
+                <ul>
+                    <li><strong>왼쪽 모니터</strong> - 입력 파라미터 및 계산 결과</li>
+                    <li><strong>오른쪽 모니터</strong> - 시스템 다이어그램 및 상세 정보</li>
+                    <li><strong>상단 툴바</strong> - 저장, 불러오기, 인쇄 등 기능</li>
+                </ul>
+            </div>
+            
+            <div id="section3" class="section">
+                <h2>주요 기능</h2>
+                
+                <h3>자동 계산 시스템</h3>
+                <p>프로그램은 입력값에 따라 다음 항목을 자동으로 계산합니다:</p>
+                
+                <div class="warning-box">
+                    <strong>참고용 안내</strong><br>
+                    아래 표시된 간격의 최소값과 최대값은 <strong>참고용</strong>입니다.<br>
+                    실제 현장 조건에 따라 상이할 수 있으므로, 반드시 현장 여건을 고려하여 적용하시기 바랍니다.
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>항목</th>
+                            <th>설명</th>
+                            <th>참고 범위*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>장선 간격</strong></td>
+                            <td>거푸집 하부 지지재</td>
+                            <td>130~400mm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>멍에 간격</strong></td>
+                            <td>장선 하부 지지재</td>
+                            <td>305~1829mm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>동바리 간격</strong></td>
+                            <td>수직 지지재</td>
+                            <td>305~1829mm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>상승각</strong></td>
+                            <td>보 구조 경사 지지재</td>
+                            <td>280~550mm</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p style="font-size: 0.9em; color: #868e96; margin-top: 10px;">
+                    * 표시된 범위는 일반적인 참고값이며, 현장 조건에 따라 달라질 수 있습니다.
+                </p>
+                
+                <h3>안전성 검토</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 10px 0;">
+                        <span style="display: inline-block; width: 60px; height: 30px; background-color: #00a652; color: white; text-align: center; line-height: 30px; border-radius: 15px; font-weight: 600; margin-right: 10px;">OK</span>
+                        구조적으로 안전
+                    </li>
+                    <li style="padding: 10px 0;">
+                        <span style="display: inline-block; width: 60px; height: 30px; background-color: #ff4444; color: white; text-align: center; line-height: 30px; border-radius: 15px; font-weight: 600; margin-right: 10px;">NG</span>
+                        재검토 필요
+                    </li>
+                </ul>
+                
+                <h3>하중 계산</h3>
+                <p>자동으로 계산되는 하중:</p>
+                <ul>
+                    <li>콘크리트 하중 (24 kN/m³)</li>
+                    <li>거푸집 하중 (0.4 kN/m²)</li>
+                    <li>활하중 (두께별 차등)</li>
+                    <li>충격하중 (1000mm 초과 시)</li>
+                </ul>
+            </div>
+            
+            <div id="section4" class="section">
+                <h2>구조물 타입별 사용법</h2>
+                
+                <h3>슬래브 (Slab)</h3>
+                
+                <h4>입력 항목</h4>
+                <ol>
+                    <li><strong>타설 두께</strong> - 100~3500mm (슬라이더 조정)</li>
+                    <li><strong>프로젝트 타입</strong>
+                        <ul>
+                            <li>건축: 동바리 최대 1829mm</li>
+                            <li>토목: 동바리 최대 1524mm</li>
+                        </ul>
+                    </li>
+                    <li><strong>X방향 스팬</strong> - 100~15000mm</li>
+                    <li><strong>Y방향 스팬</strong> - 100~15000mm</li>
+                </ol>
+                
+                <h4>사용 방법</h4>
+                <div class="code-block">
+1. 타설 두께 슬라이더로 원하는 두께 설정
+2. 건축/토목 중 프로젝트 타입 선택
+3. 슬래브 크기(X, Y 스팬) 입력
+4. 자동 계산된 결과 확인
+                </div>
+                
+                <h3>일반 보 (Normal Beam)</h3>
+                
+                <h4>입력 항목</h4>
+                <ol>
+                    <li><strong>보폭</strong> - 300~2000mm</li>
+                    <li><strong>보춤</strong> - 300~2000mm</li>
+                    <li><strong>보 스팬</strong> - 100~10000mm</li>
+                    <li><strong>보 타설 두께</strong> - 100~보춤 이하</li>
+                    <li><strong>멍에 타입</strong> - 단멍에/장멍에</li>
+                </ol>
+                
+                <h4>멍에 타입 선택</h4>
+                <ul>
+                    <li><strong>단멍에</strong> - 보 직각 방향 배치</li>
+                    <li><strong>장멍에</strong> - 보 평행 방향 배치 (상승각 포함)</li>
+                </ul>
+                
+                <h3>데크 보 (Deck Beam)</h3>
+                <p>일반 보 설정에 추가로:</p>
+                <ul>
+                    <li><strong>슬래브 두께</strong> - 100~250mm (데크슬래브)</li>
+                </ul>
+            </div>
+            
+            <div id="section5" class="section">
+                <h2>고급 기능</h2>
+                
+                <h3>수동 간격 설정</h3>
+                
+                <h4>멍에/동바리 간격 수동 선택</h4>
+                <ol>
+                    <li>자동 계산된 값 아래 "사용 가능 규격" 확인</li>
+                    <li>원하는 간격 클릭하여 수동 설정</li>
+                    <li>수동 설정 시 장선 간격 자동 재계산</li>
+                </ol>
+                
+                <div class="tip-box">
+                    <strong>v1.00 신기능</strong><br>
+                    멍에/동바리를 수동으로 넓게 설정하면, 장선 간격이 자동으로 줄어들어 구조 안전성을 확보합니다.
+                </div>
+                
+                <h3>동바리 배치 설정 (보 구조물)</h3>
+                <ol>
+                    <li>"4. 동바리 간격 계산" 영역 클릭</li>
+                    <li>열 수 선택: 2열, 3열, 4열</li>
+                    <li>동바리 간격 선택</li>
+                    <li>확인 버튼 클릭</li>
+                </ol>
+                
+                <h3>다중 구조물 관리</h3>
+                
+                <h4>구조물 추가</h4>
+                <ol>
+                    <li>상단 탭에서 "+ 추가" 클릭</li>
+                    <li>새 구조물 타입 선택</li>
+                    <li>각 구조물별로 개별 설정 가능</li>
+                </ol>
+                
+                <h4>구조물 전환</h4>
+                <ul>
+                    <li>탭 클릭으로 구조물 간 전환</li>
+                    <li>현재 설정은 자동 저장</li>
+                </ul>
+                
+                <h3>프로젝트 저장/불러오기</h3>
+                
+                <h4>저장</h4>
+                <ol>
+                    <li>툴바의 "💾 저장" 클릭</li>
+                    <li>프로젝트 이름 입력</li>
+                    <li>로컬 저장소에 저장</li>
+                </ol>
+                
+                <h4>불러오기</h4>
+                <ol>
+                    <li>"📁 불러오기" 클릭</li>
+                    <li>저장된 프로젝트 목록에서 선택</li>
+                    <li>모든 구조물 정보 복원</li>
+                </ol>
+            </div>
+            
+            <div id="section6" class="section">
+                <h2>보고서 및 출력</h2>
+                
+                <h3>참고 보고서 생성</h3>
+                <ol>
+                    <li>"📄 참고 보고서 추출" 버튼 클릭</li>
+                    <li>자동 생성된 보고서 확인</li>
+                    <li>인쇄 또는 PDF 저장</li>
+                </ol>
+                
+                <h4>보고서 포함 내용</h4>
+                <ul>
+                    <li>프로젝트 개요</li>
+                    <li>각 구조물별 설계조건</li>
+                    <li>사용재료 명세</li>
+                    <li>설계하중 계산</li>
+                    <li>구조 검토 결과</li>
+                </ul>
+                
+                <h3>3D 시각화</h3>
+                <ol>
+                    <li>"🎯 3D 시각화" 버튼 클릭</li>
+                    <li>마우스 조작
+                        <ul>
+                            <li>드래그: 회전</li>
+                            <li>스크롤: 확대/축소</li>
+                        </ul>
+                    </li>
+                    <li>구조물 구성 요소 확인</li>
+                </ol>
+                
+                <h3>정식 구조계산서 의뢰</h3>
+                
+                <div class="warning-box">
+                    <strong>중요</strong><br>
+                    현장 사용을 위해서는 반드시 구조기술사의 정식 구조계산서가 필요합니다.
+                </div>
+                
+                <ol>
+                    <li>"📋 구조기술사 의뢰하기" 클릭</li>
+                    <li>의뢰인 정보 입력</li>
+                    <li>제출 방법 선택
+                        <ul>
+                            <li>이메일 제출</li>
+                            <li>오픈카카오톡 제출</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <div id="section7" class="section">
+                <h2>문제 해결</h2>
+                
+                <h3>자주 묻는 질문</h3>
+                
+                <div class="faq-item">
+                    <strong>Q: 계산 결과가 NG로 표시됩니다.</strong>
+                    <p>입력값을 조정하거나, 수동으로 간격을 줄여보세요.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <strong>Q: 3D 뷰가 표시되지 않습니다.</strong>
+                    <p>최신 브라우저 사용 및 하드웨어 가속 활성화를 확인하세요.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <strong>Q: 저장한 프로젝트를 찾을 수 없습니다.</strong>
+                    <p>브라우저의 로컬 저장소를 확인하세요. 쿠키 삭제 시 데이터가 손실될 수 있습니다.</p>
+                </div>
+                
+                <h3>단축키</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>단축키</th>
+                            <th>기능</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><kbd>Ctrl</kbd> + <kbd>S</kbd></td>
+                            <td>프로젝트 저장</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Ctrl</kbd> + <kbd>O</kbd></td>
+                            <td>프로젝트 열기</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Ctrl</kbd> + <kbd>P</kbd></td>
+                            <td>인쇄</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Ctrl</kbd> + <kbd>R</kbd></td>
+                            <td>보고서 생성</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Ctrl</kbd> + <kbd>N</kbd></td>
+                            <td>새 구조물 추가</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>ESC</kbd></td>
+                            <td>모달 닫기</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="section8" class="section">
+                <h2>문의 및 지원</h2>
+                
+                <h3>기술 지원</h3>
+                <div class="contact-info">
+                    <p>📞 전화: <strong>010-7970-2108</strong></p>
+                    <p>✉️ 이메일: <strong>fc112@naver.com</strong></p>
+                    <p>🌐 웹사이트: <a href="https://gaseolpartner.com" target="_blank">gaseolpartner.com</a></p>
+                    <p>💬 오픈카카오: <a href="https://open.kakao.com/o/sq6cfvBh" target="_blank">구조검토 문의</a></p>
+                </div>
+                
+                <h3>프로그램 정보</h3>
+                <ul>
+                    <li><strong>버전</strong> - v1.00</li>
+                    <li><strong>개발</strong> - HJ구조&가설파트너</li>
+                    <li><strong>저작권</strong> - © 2025 HJ구조&가설파트너. All rights reserved.</li>
+                </ul>
+                
+                <h3>업데이트 내역</h3>
+                
+                <h4>v1.00 (2025.01)</h4>
+                <ul class="feature-list">
+                    <li>멍에/동바리 수동 설정 시 장선 자동 최적화</li>
+                    <li>타설높이 기반 동적 계산 시스템</li>
+                    <li>3D 시각화 기능 추가</li>
+                    <li>다중 구조물 관리 기능</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="warning-box">
+                <strong>주의사항</strong><br>
+                본 프로그램의 계산 결과는 참고용입니다.<br>
+                실제 현장 적용 시 반드시 구조기술사의 검토를 받으시기 바랍니다.
+            </div>
+            <p>© 2025 HJ구조&가설파트너. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

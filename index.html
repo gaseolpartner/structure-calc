@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HJ구조&가설파트너 - 구조계산 프로그램 선택">
+    <meta name="author" content="HJ구조&가설파트너">
+    <meta name="keywords" content="시스템비계, 시스템동바리, 구조계산, 건설, 가설구조물">
+    <title>HJ구조&가설파트너 구조계산 프로그램</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9DVT53VFV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N9DVT53VFV');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .main-container {
+            text-align: center;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .company-header {
+            margin-bottom: 50px;
+        }
+        
+        .company-name {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff8800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #888;
+        }
+        
+        .version-badge {
+            display: inline-block;
+            background: rgba(255,136,0,0.2);
+            border: 1px solid #ff8800;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .selection-title {
+            font-size: 28px;
+            color: #ff8800;
+            margin-bottom: 50px;
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .program-card {
+            background: #1a1a1a;
+            border: 2px solid #ff8800;
+            border-radius: 10px;
+            padding: 40px 30px;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .program-card:hover {
+            background: #2a2a2a;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255,136,0,0.3);
+        }
+        
+        .program-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .program-title {
+            font-size: 24px;
+            color: #ff8800;
+            margin-bottom: 15px;
+        }
+        
+        .program-description {
+            font-size: 14px;
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .program-features {
+            text-align: left;
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            font-size: 13px;
+            color: #888;
+            margin: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .feature-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff8800;
+        }
+        
+        .program-button {
+            background: #ff8800;
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        
+        .program-card:hover .program-button {
+            background: #ff9922;
+        }
+        
+        .manual-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+        }
+        
+        .manual-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .manual-link {
+            background: #333;
+            border: 1px solid #666;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+        
+        .manual-link:hover {
+            background: #444;
+            border-color: #ff8800;
+        }
+        
+        .contact-info {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255,136,0,0.1);
+            border: 1px solid #ff8800;
+            border-radius: 10px;
+        }
+        
+        .contact-info p {
+            margin: 10px 0;
+            color: #888;
+        }
+        
+        .contact-info a {
+            color: #ff8800;
+            text-decoration: none;
+        }
+        
+        .warning-notice {
+            background: rgba(255,68,68,0.1);
+            border: 1px solid #ff4444;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 30px auto;
+            max-width: 800px;
+        }
+        
+        .warning-notice strong {
+            color: #ff4444;
+        }
+        
+        .copyright-notice {
+            margin-top: 30px;
+            font-size: 11px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .company-name {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="company-header">
+            <h1 class="company-name">HJ구조&가설파트너</h1>
+            <p class="subtitle">구조계산 프로그램 센터</p>
+            <span class="version-badge">Version 2.1</span>
+        </div>
+        
+        <h2 class="selection-title">프로그램을 선택하세요</h2>
+        
+        <div class="programs-grid">
+            <a href="system-scaffold.html" class="program-card" onclick="trackEvent('program_select', 'system_scaffold')">
+                <div class="program-icon">🏗️</div>
+                <h3 class="program-title">시스템 비계 구조계산</h3>
+                <p class="program-description">
+                    OK System 등 규격화된 시스템 비계의 구조 안전성을 검토합니다.
+                </p>
+                <div class="program-features">
+                    <div class="feature-item">KDS 기준 정밀 계산</div>
+                    <div class="feature-item">실시간 안전성 검토</div>
+                    <div class="feature-item">다중 구조물 지원</div>
+                    <div class="feature-item">참고 보고서 생성</div>
+                </div>
+                <div class="program-button">프로그램 실행 →</div>
+            </a>
+            
+            <a href="system-support.html" class="program-card" onclick="trackEvent('program_select', 'system_support')">
+                <div class="program-icon">🔧</div>
+                <h3 class="program-title">시스템 동바리 구조계산</h3>
+                <p class="program-description">
+                    슬래브 및 보 동바리 시스템의 구조 안전성을 검토합니다.
+                </p>
+                <div class="program-features">
+                    <div class="feature-item">콘크리트 하중 자동계산</div>
+                    <div class="feature-item">좌굴 안정성 검토</div>
+                    <div class="feature-item">멍에/장선 설계</div>
+                    <div class="feature-item">시공 단계별 검토</div>
+                </div>
+                <div class="program-button">프로그램 실행 →</div>
+            </a>
+        </div>
+        
+        <div class="manual-section">
+            <h3 style="color: #ff8800; margin-bottom: 20px;">📚 사용자 매뉴얼</h3>
+            <div class="manual-links">
+                <a href="manual-scaffold.html" class="manual-link">시스템 비계 매뉴얼</a>
+                <a href="manual-support.html" class="manual-link">시스템 동바리 매뉴얼</a>
+            </div>
+        </div>
+        
+        <div class="warning-notice">
+            <p><strong>⚠️ 중요 안내사항</strong></p>
+            <p>본 프로그램의 계산 결과는 <strong>참고용 보고서</strong>이며, 현장 조건에 따라 상이할 수 있습니다.</p>
+            <p>실제 시공 시에는 반드시 HJ구조사무실의 <strong>정식 구조계산서</strong>를 받으시기 바랍니다.</p>
+            <p>본 프로그램의 보고서는 <strong>관공서 제출용으로 사용할 수 없습니다.</strong></p>
+        </div>
+        
+        <div class="contact-info">
+            <h3 style="color: #ff8800; margin-bottom: 20px;">구조 검토서 및 프로그램 문의</h3>
+            <p>📞 전화: <a href="tel:010-7970-2108">010-7970-2108</a></p>
+            <p>✉️ 이메일: <a href="mailto:fc112@naver.com">fc112@naver.com</a></p>
+            <p>🌐 웹사이트: <a href="https://gaseolpartner.com" target="_blank">gaseolpartner.com</a></p>
+            <p>💬 오픈카카오: <a href="https://open.kakao.com/o/sq6cfvBh" target="_blank">구조검토 문의</a></p>
+        </div>
+        
+        <div class="copyright-notice">
+            © 2025 HJ구조&가설파트너. All rights reserved.<br>
+            본 프로그램의 모든 저작권은 HJ구조&가설파트너에 있습니다.<br>
+            무단 복제 및 배포를 금지합니다.
+        </div>
+    </div>
+    
+    <script>
+        // Google Analytics 이벤트 추적
+        function trackEvent(action, label) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    'event_category': 'engagement',
+                    'event_label': label
+                });
+            }
+        }
+        
+        // 방문 추적
+        window.addEventListener('load', function() {
+            trackEvent('page_view', 'index');
+        });
+    </script>
+</body>
+</html>
