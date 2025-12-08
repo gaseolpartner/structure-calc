@@ -1012,7 +1012,7 @@
             <div style="margin-top: 50px; text-align: center; color: #666;">
                 <p>구조 검토서 및 프로그램 문의</p>
                 <p style="color: #888; margin-top: 10px;">
-                    📞 010-7970-2108 | ✉️ fc112@naver.com | 
+                    📞 010-7970-2108 | ✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb9d98cacac9bb959a8d9e89d5989496">[email&#160;protected]</a> | 
                     🌐 <a href="https://gaseolpartner.com" target="_blank" style="color: #ff8800; text-decoration: none;">gaseolpartner.com</a>
                 </p>
                 <p style="color: #888; margin-top: 10px; font-size: 12px;">
@@ -1423,7 +1423,7 @@
         <div class="footer-info">
             <p>구조 검토서 및 프로그램 문의: 
                 <a href="tel:010-7970-2108">010-7970-2108</a> | 
-                <a href="mailto:fc112@naver.com">fc112@naver.com</a> | 
+                <a href="/cdn-cgi/l/email-protection#214742101013614f405744530f424e4c"><span class="__cf_email__" data-cfemail="c6a0a5f7f7f486a8a7b0a3b4e8a5a9ab">[email&#160;protected]</span></a> | 
                 <a href="https://gaseolpartner.com" target="_blank">gaseolpartner.com</a> | 
                 <a href="https://open.kakao.com/o/sq6cfvBh" target="_blank">오픈카카오</a>
             </p>
@@ -1513,7 +1513,7 @@
                     <button type="button" onclick="sendRequestByEmail()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="background: #0066cc; color: #fff; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,102,204,0.3);">
                         <div style="font-size: 24px; margin-bottom: 5px;">✉️</div>
                         이메일로 제출
-                        <div style="font-size: 12px; font-weight: normal; margin-top: 5px;">fc112@naver.com</div>
+                        <div style="font-size: 12px; font-weight: normal; margin-top: 5px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="deb8bdefefec9eb0bfa8bbacf0bdb1b3">[email&#160;protected]</a></div>
                     </button>
                     <button type="button" onclick="sendRequestByKakao()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="background: #f9e000; color: #3c1e1e; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,224,0,0.3);">
                         <div style="font-size: 24px; margin-bottom: 5px;">💬</div>
@@ -1538,7 +1538,7 @@
         <p>Shift + Tab: 이전 입력란</p>
     </div>
     
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // 초기 보안 경고
         console.log('%c⚠️ 정지!', 'color: red; font-size: 50px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);');
         console.log('%c이것은 브라우저 개발자 도구입니다.', 'color: red; font-size: 20px;');
@@ -1767,6 +1767,14 @@ defaultJoistSpacing: 914,
                 
                 updateSpecDisplay();
                 updateCalculations();
+                
+                // Google Analytics 추적
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', '비계타입선택', {
+                        'event_category': '프로그램사용',
+                        'event_label': type === 'system-scaffold' ? '시스템비계' : '강관비계'
+                    });
+                }
             } catch (error) {
                 console.error('selectType 오류:', error);
                 alert('오류가 발생했습니다: ' + error.message);
@@ -1806,14 +1814,6 @@ defaultJoistSpacing: 914,
             
             updateCalculations();
         }
-        
-        // Google Analytics 추적
-if (typeof gtag !== 'undefined') {
-    gtag('event', '비계타입선택', {
-        'event_category': '프로그램사용',
-        'event_label': type === 'system-scaffold' ? '시스템비계' : '강관비계'
-    });
-}
 
         // 돌아가기
         function goBack() {
@@ -3476,15 +3476,4 @@ ${reviewTable}
 <!--
 ==============================================================
                  HJ구조&가설파트너
-==============================================================
-본 프로그램의 모든 권리는 HJ구조&가설파트너에 있습니다.
-파일명이나 내용을 임의로 변경하지 마십시오.
-
-원본 파일명: 시스템비계 구조계산 (가설파트너&HJ구조).html
-버전: v2.1
-저작권: © 2025 HJ구조&가설파트너
-
-문의: 010-7970-2108 | fc112@naver.com | gaseolpartner.com
-==============================================================
--->
-                    
+===================
