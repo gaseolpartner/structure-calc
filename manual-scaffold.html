@@ -761,7 +761,7 @@
             console.log('%c© ' + new Date().getFullYear() + ' HJ구조기술사사무소 · 가설파트너. All rights reserved.', 'color: #1B1B1B; font-size: 16px; font-weight: bold;');
             
             // 타이틀 변경 방지
-            const originalTitle = '시스템비계 구조계산 사용자 매뉴얼 - HJ구조기술사사무소 · 가설파트너 v2.1';
+            const originalTitle = '시스템 비계 구조계산 매뉴얼 | 가설파트너';
             setInterval(() => {
                 if (document.title !== originalTitle) {
                     document.title = originalTitle;
@@ -800,6 +800,8 @@ h2{color:#1B1B1B !important;border-bottom-color:#F2B705 !important}
 th{background:#1B1B1B !important;color:#fff !important}
 .copyright-badge{background:#1B1B1B !important;color:#fff !important;opacity:.85}
 @media(max-width:700px){.copyright-badge{display:none}}
+
+@media(max-width:600px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}}
 
 </style>
 </head>
