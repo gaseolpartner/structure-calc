@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>시스템비계 구조계산 사용자 매뉴얼 - HJ구조&가설파트너 v2.1</title>
+    <title>시스템 비계 구조계산 매뉴얼 | 가설파트너</title>
     
     <!-- 파비콘 설정 -->
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQfSURBVFiFtZddbBRVFMd/Z2Znd7vb7m5bWloKpbQUKEWhIqAYI0ajRhONGhMTH3zwwRdjYuKDMb74YIwx8cEHE2NijDEmGo0xfqBRokYjIqJQQAT5LBRa+mG3u93d2Z2PuXcfdrZT2i0U5SSTzNx7z/n/z7nn3HMGSlzXTkyEOXT4CN9+P0upJZfLoWkaAK+88gqPPPzQVRsT9gaSySSvv/EWe/b8gqZpBINBAoEAlmVhGAY7d+5k+/btANTW1nL7xg1s2bKlJOGtL2xn3759HD58mNraWlasWEFlZSWGYTA8PMyBAwc4evQomqYRCoV4/fXX2XzXXVcUuJTAyZMn2f78C0Sj40SjUXw+H7quk06nCQQCRKNRdF0nGAzi8Xg4duwY7733Htu2bWPjhvUlhC8S6Ovr49lnn6Wnp4fKykpkWSaVSuHz+chms6TTaQBkWcbn82EYBslkkoqKCnw+H2+99RY7d+7k1ltv5d5776W6unpeeEEgGo3y8MMPMzQ0RDAYRJIk4vE40WiUvr4+YrEYExMTZLNZJEmiurqa+vp6mpubCYVCKIrCxMQEZ8+eZefOnTz11FM88MADvPjii1y3Zg0AVl4gl8vx+BNPcPLkSUKhkPtlJpPB7/dTVlaGz+dDkiQAstkssViMkZERJicnCYfDKIpCNpvF6/USDofZvHkzN9xwA2+//TbPPfccBw8epPXaa3FMC7v9/Pn2AwcO4Pf7XfIAkiQhSRKapqGqKqqqous6mqZhmiaJRIKBgQGi0SipVAqPx0MikeDgwYMcPXoUVVXx+/10dXWxZ88ebKDt/PnzRKPRIvKCPKD7AhRFcddkWcbv99PQ0MDy5cupqqpC13VSqRT79+9n165djI6Ooigely/k/d0CkskkSbH8vyjH/dyyLCRJIhQKsWLFCurq6lBVFb/fT2dnJ++//z5nz55FVVXBLUsAJJNJzKK3LQwgHgBN1QiHw9TU1LhmBZAlMpmMy1+U2+oCgiMzJ4tlWeRyOdfD5XI5crmcy2cYhptT9FkILCiQTqfdnKJMJBJ0dHTQ0dFBNBrFNE2XNxKJuMdeCAKLBoRSSQy8vXq1u2fKy8tdK0yfPk00OnZJgbCIdD5/lmWRTCYJhcIs7Vw6wy8AJFEiiiQgFnJhVCAUCgGgK7pLUBYrEuU8oOu6W3mKGBGGLS4wEg673xYK5IuJcFGl/GJUBW0UxgIFw+Gwu5H+F4BwE5EJpzGRdBOLJABQUCafz18iIH7zglJRIRwOYzt2USJyF+K5uTmJ6vGwfNkyvF4vhmFgGAaJRIJ0Ou1mQJFPJElCURRCoRBVVVXU1tZiGAaGYRCPxxkeHnZr4fTtWJI8Xq+PxsbGa1atWrXStu2AZVn+fI8gFe5SJN4slhNAprc33dvbe3oxT/4DcUfAHWJnBAIAAAAASUVORK5CYII=">
@@ -41,11 +41,11 @@
         }
         
         :root {
-            --primary-color: #ff8800;
-            --primary-dark: #e67a00;
+            --primary-color: #F2B705;
+            --primary-dark: #F2B705;
             --primary-light: #fff4e6;
-            --secondary-color: #2c3e50;
-            --text-primary: #2c3e50;
+            --secondary-color: #1B1B1B;
+            --text-primary: #1B1B1B;
             --text-secondary: #6c757d;
             --bg-primary: #ffffff;
             --bg-secondary: #f8f9fa;
@@ -54,12 +54,12 @@
             --warning-border: #ffc107;
             --danger-bg: #ffebee;
             --danger-border: #ff4444;
-            --info-bg: #e3f2fd;
-            --info-border: #2196f3;
-            --tip-bg: #f3e5f5;
-            --tip-border: #9c27b0;
+            --info-bg: #F6F6F4;
+            --info-border: #F2B705;
+            --tip-bg: #F6F6F4;
+            --tip-border: #1B1B1B;
             --success-bg: #e8f5e9;
-            --success-border: #00ff88;
+            --success-border: #F2B705;
         }
         
         body {
@@ -73,13 +73,13 @@
         
         /* 워터마크 */
         body::before {
-            content: "© 2025 HJ구조&가설파트너";
+            content: "© HJ구조기술사사무소 · 가설파트너";
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) rotate(-45deg);
             font-size: 120px;
-            color: rgba(255, 136, 0, 0.03);
+            color: rgba(27, 27, 27, 0.03);
             z-index: -1;
             pointer-events: none;
             white-space: nowrap;
@@ -143,7 +143,7 @@
         
         .header {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white;
+            color: #1B1B1B;
             padding: 60px 40px;
             text-align: center;
             position: relative;
@@ -266,7 +266,7 @@
             left: 0;
             top: 0;
             background-color: var(--primary-color);
-            color: white;
+            color: #1B1B1B;
             width: 25px;
             height: 25px;
             border-radius: 50%;
@@ -304,7 +304,7 @@
         
         th {
             background-color: var(--primary-color);
-            color: white;
+            color: #1B1B1B;
             font-weight: 500;
             font-size: 0.95em;
             letter-spacing: 0.5px;
@@ -341,7 +341,7 @@
             left: 0;
             top: 12px;
             background-color: var(--primary-color);
-            color: white;
+            color: #1B1B1B;
             width: 24px;
             height: 24px;
             border-radius: 50%;
@@ -384,7 +384,7 @@
         }
         
         .warning-box strong {
-            color: #f57c00;
+            color: #1B1B1B;
         }
         
         .danger-box {
@@ -412,7 +412,7 @@
         }
         
         .info-box strong {
-            color: #1976d2;
+            color: #1B1B1B;
         }
         
         .tip-box {
@@ -426,7 +426,7 @@
         }
         
         .tip-box strong {
-            color: #7b1fa2;
+            color: #1B1B1B;
         }
         
         .success-box {
@@ -465,7 +465,7 @@
             margin: 30px 0;
             border-radius: 12px;
             text-align: center;
-            border: 1px solid rgba(255, 136, 0, 0.1);
+            border: 1px solid rgba(242, 183, 5, 0.1);
         }
         
         .contact-info p {
@@ -512,8 +512,8 @@
             position: fixed;
             bottom: 20px;
             left: 20px;
-            background: rgba(255, 136, 0, 0.9);
-            color: white;
+            background: rgba(242, 183, 5, 0.9);
+            color: #1B1B1B;
             padding: 8px 15px;
             border-radius: 5px;
             font-size: 12px;
@@ -523,13 +523,13 @@
         /* 인쇄 시 워터마크 */
         @media print {
             body::after {
-                content: "HJ구조&가설파트너 정품 문서 | 무단 복제 금지";
+                content: "HJ구조기술사사무소 · 가설파트너 정품 문서 | 무단 복제 금지";
                 position: fixed;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%) rotate(-45deg);
                 font-size: 60px;
-                color: rgba(255, 136, 0, 0.15);
+                color: rgba(27, 27, 27, 0.15);
                 z-index: 9999;
                 white-space: nowrap;
             }
@@ -639,14 +639,14 @@
             const emitEvent = (state) => {
                 if (state) {
                     document.body.innerHTML = `
-                        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #ff8800; color: white; font-size: 24px; text-align: center;">
+                        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #F2B705; color: #1B1B1B; font-size: 24px; text-align: center;">
                             <div>
                                 <h1>⚠️ 보안 경고</h1>
                                 <p>개발자 도구 사용이 감지되었습니다.</p>
                                 <p>본 문서는 저작권으로 보호되고 있습니다.</p>
-                                <p>© 2025 HJ구조&가설파트너</p>
+                                <p>© ${new Date().getFullYear()} HJ구조기술사사무소 · 가설파트너</p>
                                 <p style="margin-top: 20px;">
-                                    <button onclick="location.reload()" style="padding: 10px 30px; font-size: 16px; cursor: pointer; background: white; color: #ff8800; border: none; border-radius: 5px;">
+                                    <button onclick="location.reload()" style="padding: 10px 30px; font-size: 16px; cursor: pointer; background: white; color: #1B1B1B; border: none; border-radius: 5px;">
                                         페이지 새로고침
                                     </button>
                                 </p>
@@ -761,10 +761,10 @@
             console.log('%c⚠️ 경고!', 'color: red; font-size: 50px; font-weight: bold;');
             console.log('%c이 문서는 저작권으로 보호됩니다.', 'color: red; font-size: 20px;');
             console.log('%c무단 복제 및 수정 시 법적 조치를 받을 수 있습니다.', 'color: red; font-size: 16px;');
-            console.log('%c© 2025 HJ구조&가설파트너. All rights reserved.', 'color: #ff8800; font-size: 16px; font-weight: bold;');
+            console.log('%c© ' + new Date().getFullYear() + ' HJ구조기술사사무소 · 가설파트너. All rights reserved.', 'color: #1B1B1B; font-size: 16px; font-weight: bold;');
             
             // 타이틀 변경 방지
-            const originalTitle = '시스템비계 구조계산 사용자 매뉴얼 - HJ구조&가설파트너 v2.1';
+            const originalTitle = '시스템비계 구조계산 사용자 매뉴얼 - HJ구조기술사사무소 · 가설파트너 v2.1';
             setInterval(() => {
                 if (document.title !== originalTitle) {
                     document.title = originalTitle;
@@ -772,8 +772,31 @@
             }, 1000);
         })();
     </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="gp-common.css">
+<style id="gp-page">
+
+:root{--primary-dark:#D9A300;--primary-light:#FFF3C4;--secondary-color:#1B1B1B}
+body{background:#F6F6F4}
+.header{background:#1B1B1B !important;color:#fff !important}
+.header h1{color:#fff}
+.header .subtitle{color:#CFCFCF !important;opacity:1}
+.header .version{background:#F2B705 !important;color:#1B1B1B !important}
+.header::before{opacity:.07}
+h2{color:#1B1B1B !important;border-bottom-color:#F2B705 !important}
+.toc a:hover,.faq-item h4,.faq-item strong,.version-info h4{color:#1B1B1B !important}
+.contact-info{background:#FFF9E6 !important;border-color:#F2B705 !important}
+.contact-info strong{color:#1B1B1B !important}
+.contact-info a,.content a{color:#7F6000 !important;text-decoration:underline;text-underline-offset:2px}
+th{background:#1B1B1B !important;color:#fff !important}
+.copyright-badge{background:#1B1B1B !important;color:#fff !important;opacity:.85}
+@media(max-width:700px){.copyright-badge{display:none}}
+
+</style>
 </head>
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<div class="gp-topbar"><div class="gp-topbar-inner"><a href="https://gaseolpartner.com"><span class="dot"></span>가설파트너 홈페이지 ↗</a><nav><a href="https://gaseolpartner.com/pages/introduction">가설 설계 프로그램</a><a href="https://gaseolpartner.com/pages/precio">가설재 견적 비교</a><a href="https://gaseolpartner.com/pages/structureatuntroduction">구조검토</a><a href="https://gaseolpartner.com/pages/calculators">지원 서비스</a><a href="https://gaseolpartner.com/pages/support">고객지원</a></nav></div></div><header class="gp-brandbar"><div class="gp-brandbar-inner"><a class="gp-logo" href="index.html" aria-label="가설파트너"><span class="gp-li"></span><span class="gp-lt"><b>가설파트너</b><small>GASEOL PARTNER</small></span></a><div class="gp-brand-links"><a href="index.html">← 목록으로</a><a href="https://gaseolpartner.com/pages/structureatuntroduction" class="gp-cta" target="_blank" rel="noopener">정식 구조검토 의뢰</a></div></div></header>
+
     <!-- 보안 경고 -->
     <div id="securityAlert" class="security-alert"></div>
     
@@ -782,13 +805,13 @@
     
     <!-- 저작권 표시 -->
     <div class="copyright-badge">
-        © 2025 HJ구조&가설파트너
+        © <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너
     </div>
     
     <div class="container">
         <div class="header">
             <h1>시스템 비계 구조계산 사용자 매뉴얼</h1>
-            <p class="subtitle">HJ구조&가설파트너</p>
+            <p class="subtitle">HJ구조기술사사무소 · 가설파트너</p>
             <span class="version">Version 2.1</span>
         </div>
         
@@ -817,7 +840,7 @@
                 <div class="danger-box">
                     <strong>중요 고지사항</strong><br>
                     본 프로그램의 계산 결과는 <strong>참고용 보고서</strong>이며, 현장 조건에 따라 상이할 수 있습니다.<br>
-                    실제 시공 시에는 반드시 HJ구조사무실의 <strong>정식 구조계산서</strong>를 받으시기 바랍니다.<br>
+                    실제 시공 시에는 반드시 HJ구조기술사사무소의 <strong>정식 구조계산서</strong>를 받으시기 바랍니다.<br>
                     본 프로그램의 보고서는 <strong>관공서 제출용으로 사용할 수 없습니다.</strong>
                 </div>
                 
@@ -1316,7 +1339,7 @@
                     <p>📞 전화: <strong>010-7970-2108</strong></p>
                     <p>✉️ 이메일: <strong>fc112@naver.com</strong></p>
                     <p>🌐 웹사이트: <a href="https://gaseolpartner.com" target="_blank">gaseolpartner.com</a></p>
-                    <p>💬 오픈카카오: <a href="https://open.kakao.com/o/sq6cfvBh" target="_blank">구조검토 문의</a></p>
+                    <p>💬 카카오톡 채널: <a href="https://pf.kakao.com/_xovuVG/chat" target="_blank">구조검토 문의</a></p>
                 </div>
                 
                 <h3>프로그램 정보</h3>
@@ -1338,11 +1361,11 @@
                         </tr>
                         <tr>
                             <td>개발</td>
-                            <td>HJ구조&가설파트너</td>
+                            <td>HJ구조기술사사무소 · 가설파트너</td>
                         </tr>
                         <tr>
                             <td>저작권</td>
-                            <td>© 2025 HJ구조&가설파트너</td>
+                            <td>© <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너</td>
                         </tr>
                         <tr>
                             <td>라이선스</td>
@@ -1377,7 +1400,7 @@
                 <h3>저작권 및 면책조항</h3>
                 <div class="warning-box">
                     <strong>저작권</strong><br>
-                    본 프로그램의 모든 권리는 HJ구조&가설파트너에 있습니다.<br>
+                    본 프로그램의 모든 권리는 HJ구조기술사사무소 · 가설파트너에 있습니다.<br>
                     무단 복제, 수정, 배포를 금지합니다.
                 </div>
                 
@@ -1397,7 +1420,7 @@
                 실제 현장 적용 시 반드시 <strong>구조기술사의 정식 검토</strong>를 받으시기 바랍니다.<br>
                 본 프로그램의 보고서는 <strong>관공서 제출용으로 사용할 수 없습니다.</strong>
             </div>
-            <p>© 2025 HJ구조&가설파트너. All rights reserved.</p>
+            <p>© <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너. All rights reserved.</p>
             <p style="margin-top: 10px; font-size: 0.9em;">
                 본 매뉴얼은 시스템 비계 구조계산 프로그램 v2.1 기준으로 작성되었습니다.
             </p>
@@ -1406,5 +1429,6 @@
             </p>
         </div>
     </div>
+<footer class="gp-footer"><div class="gp-footer-inner"><div>회사명 : 가설파트너<span class="gp-sep">|</span>주소 : 서울 강남구 가로수길 5<span class="gp-sep">|</span>이메일 : <a href="mailto:fc112@naver.com">fc112@naver.com</a><span class="gp-sep">|</span>전화 : <a href="tel:01079702108">010-7970-2108</a><span class="gp-sep">|</span>사업자등록번호 : 549-20-01841</div><div class="gp-copyline">ⓒ <span class="gp-year">2026</span> 가설파트너 · <a href="https://gaseolpartner.com" target="_blank" rel="noopener">gaseolpartner.com</a></div></div></footer><script>(function(){var y=new Date().getFullYear();document.querySelectorAll('.gp-year').forEach(function(e){e.textContent=y});})();</script>
 </body>
 </html>

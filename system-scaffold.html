@@ -8,7 +8,7 @@
 이 파일의 파일명과 내용을 변경하지 마십시오.
 본 프로그램은 저작권법에 의해 보호되고 있습니다.
 
-© 2025 HJ구조&가설파트너. All rights reserved.
+© <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너. All rights reserved.
 
 무단 복제, 수정, 배포 시 법적 처벌을 받을 수 있습니다.
 문의: 010-7970-2108 | fc112@naver.com
@@ -18,20 +18,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HJ구조&가설파트너 - 시스템 비계 구조 계산 프로그램 v2.1">
-    <meta name="author" content="HJ구조&가설파트너">
+    <meta name="description" content="HJ구조기술사사무소 · 가설파트너 - 시스템 비계 구조 계산 프로그램 v2.1">
+    <meta name="author" content="HJ구조기술사사무소 · 가설파트너">
     <meta name="keywords" content="시스템비계, 강관비계, 구조계산, 건설, 가설구조물">
-    <meta name="copyright" content="© 2025 HJ구조&가설파트너. All rights reserved.">
-    <meta name="generator" content="HJ구조&가설파트너 시스템 비계 v2.1">
+    <meta name="copyright" content="© HJ구조기술사사무소 · 가설파트너. All rights reserved.">
+    <meta name="generator" content="HJ구조기술사사무소 · 가설파트너 시스템 비계 v2.1">
     <meta name="application-name" content="시스템 비계 구조 계산">
-    <meta name="msapplication-tooltip" content="HJ구조&가설파트너 시스템 비계 구조 계산 프로그램">
-    <meta name="msapplication-TileColor" content="#ff8800">
+    <meta name="msapplication-tooltip" content="HJ구조기술사사무소 · 가설파트너 시스템 비계 구조 계산 프로그램">
+    <meta name="msapplication-TileColor" content="#1B1B1B">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>시스템 비계 구조 계산 v2.1 - HJ구조&가설파트너</title>
+    <title>시스템 비계 구조계산 | 가설파트너</title>
     
     <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9DVT53VFV"></script>
@@ -78,7 +78,7 @@
             background: #1a1a1a;
             color: #fff;
             overflow: hidden;
-            height: 100vh;
+            height: calc(100vh - 40px);
             /* 이미지 및 요소 보호 */
             -webkit-touch-callout: none;
             -webkit-tap-highlight-color: transparent;
@@ -96,7 +96,7 @@
         
         /* 워터마크 */
         body::before {
-            content: "© 2025 HJ구조&가설파트너";
+            content: "© HJ구조기술사사무소 · 가설파트너";
             position: fixed;
             top: 50%;
             left: 50%;
@@ -113,7 +113,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: calc(100vh - 40px);
             background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
         }
         
@@ -124,7 +124,7 @@
         
         .selection-title {
             font-size: 32px;
-            color: #ff8800;
+            color: #F2B705;
             margin-bottom: 50px;
         }
         
@@ -137,8 +137,8 @@
         
         .selection-button {
             background: #1a1a1a;
-            border: 2px solid #ff8800;
-            color: #ff8800;
+            border: 2px solid #F2B705;
+            color: #F2B705;
             padding: 40px 60px;
             font-size: 20px;
             border-radius: 10px;
@@ -149,16 +149,16 @@
         }
         
         .selection-button:hover {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
             transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255,136,0,0.3);
+            box-shadow: 0 10px 30px rgba(242, 183, 5,0.3);
         }
         
         /* 메인 작업 화면 */
         .workspace {
             display: none;
-            height: 100vh;
+            height: calc(100vh - 40px);
             background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
         }
         
@@ -189,7 +189,7 @@
         
         .monitor-title {
             font-size: 16px;
-            color: #ff8800;
+            color: #F2B705;
         }
         
         .monitor-content {
@@ -216,7 +216,7 @@
         }
         
         .control-section h4 {
-            color: #ff8800;
+            color: #F2B705;
             margin-bottom: 15px;
             font-size: 14px;
             text-transform: uppercase;
@@ -284,7 +284,7 @@
             padding: 12px;
             text-align: left;
             border-bottom: 2px solid #444;
-            color: #ff8800;
+            color: #F2B705;
         }
         
         .result-table td {
@@ -293,7 +293,7 @@
         }
         
         .status-ok {
-            color: #00ff88;
+            color: #F2B705;
             font-weight: bold;
         }
         
@@ -325,7 +325,7 @@
         
         .diagram-item h3 {
             font-size: 16px;
-            color: #ff8800;
+            color: #F2B705;
             margin-bottom: 10px;
         }
         
@@ -336,8 +336,8 @@
         }
         
         .diagram-item.active {
-            border-color: #ff8800;
-            box-shadow: 0 0 10px rgba(255,136,0,0.3);
+            border-color: #F2B705;
+            box-shadow: 0 0 10px rgba(242, 183, 5,0.3);
         }
         
         .diagram-item.error {
@@ -346,14 +346,14 @@
         }
         
         .value-display {
-            color: #ff8800;
+            color: #F2B705;
             font-weight: bold;
             font-size: 18px;
         }
         
         .success-message {
-            background: rgba(0,255,136,0.1);
-            border: 1px solid #00ff88;
+            background: rgba(242, 183, 5,0.1);
+            border: 1px solid #F2B705;
             border-radius: 5px;
             padding: 15px;
             margin: 20px 0;
@@ -372,7 +372,7 @@
         }
         
         .report-button {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
             border: none;
             padding: 15px 40px;
@@ -387,7 +387,7 @@
         
         .report-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(255,136,0,0.4);
+            box-shadow: 0 5px 20px rgba(242, 183, 5,0.4);
         }
         
         .report-button:disabled {
@@ -426,14 +426,14 @@
         .company-name {
             font-size: 24px;
             font-weight: bold;
-            color: #ff8800;
+            color: #F2B705;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         /* 구조 분석 섹션 */
         .structure-analysis {
             background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-            border: 1px solid #ff8800;
+            border: 1px solid #F2B705;
             border-radius: 5px;
             padding: 20px;
             margin-top: 20px;
@@ -453,7 +453,7 @@
         }
         
         .analysis-value {
-            color: #ff8800;
+            color: #F2B705;
             font-size: 32px;
             font-weight: bold;
         }
@@ -582,13 +582,13 @@
         }
         
         .footer-info a:hover {
-            color: #ff8800;
+            color: #F2B705;
         }
         
         .info-badge {
             display: inline-block;
             background: #222;
-            color: #ff8800;
+            color: #F2B705;
             padding: 2px 8px;
             border-radius: 3px;
             font-size: 11px;
@@ -605,7 +605,7 @@
                 transform: scale(1);
             }
             50% { 
-                background-color: rgba(255,136,0,0.2);
+                background-color: rgba(242, 183, 5,0.2);
                 transform: scale(1.05);
             }
             100% { 
@@ -637,7 +637,7 @@
         
         .toolbar-button:hover {
             background: #444;
-            border-color: #ff8800;
+            border-color: #F2B705;
         }
         
         /* 프로젝트 관리 모달 */
@@ -648,7 +648,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background: #1a1a1a;
-            border: 2px solid #ff8800;
+            border: 2px solid #F2B705;
             border-radius: 10px;
             padding: 30px;
             z-index: 1000;
@@ -676,7 +676,7 @@
         }
         
         .project-item:hover {
-            border-color: #ff8800;
+            border-color: #F2B705;
         }
         
         .project-info {
@@ -725,9 +725,9 @@
         }
         
         .structure-tab.active {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
-            border-color: #ff8800;
+            border-color: #F2B705;
         }
         
         .structure-tab-close {
@@ -747,8 +747,8 @@
         }
         
         .add-structure-btn:hover {
-            border-color: #ff8800;
-            color: #ff8800;
+            border-color: #F2B705;
+            color: #F2B705;
         }
         
         /* 단축키 정보 */
@@ -798,7 +798,7 @@
         
         .modal-content {
             background: #1a1a1a;
-            border: 2px solid #ff8800;
+            border: 2px solid #F2B705;
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
@@ -815,7 +815,7 @@
         }
         
         .modal-header h2 {
-            color: #ff8800;
+            color: #F2B705;
             margin: 0;
         }
         
@@ -850,7 +850,7 @@
         }
         
         .modal-button.confirm {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
         }
         
@@ -862,8 +862,8 @@
         /* 선택 버튼 - 모달에서도 사용 */
         .modal .selection-button {
             background: #1a1a1a;
-            border: 2px solid #ff8800;
-            color: #ff8800;
+            border: 2px solid #F2B705;
+            color: #F2B705;
             padding: 40px 60px;
             font-size: 20px;
             border-radius: 10px;
@@ -874,16 +874,16 @@
         }
         
         .modal .selection-button:hover {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
             transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255,136,0,0.3);
+            box-shadow: 0 10px 30px rgba(242, 183, 5,0.3);
         }
         
         /* 대시보드 데이터 표시 */
         .dashboard-data-info {
-            background: rgba(255,136,0,0.1);
-            border: 1px solid #ff8800;
+            background: rgba(242, 183, 5,0.1);
+            border: 1px solid #F2B705;
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
@@ -986,12 +986,26 @@
             }
         }
     </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="gp-common.css">
+<style id="gp-page">
+body{height:100vh}
+.selection-screen,.workspace{position:relative}
+@media(max-width:700px){
+ .selection-screen{overflow-y:auto;flex-direction:column;align-items:center;justify-content:flex-start;padding:16px 12px 28px;box-sizing:border-box}
+ .selection-screen .company-header{position:static;transform:none;margin:0 0 6px}
+ .selection-screen .company-name{font-size:18px}
+ .selection-screen .copyright-notice{position:static;transform:none;margin:18px auto 0;max-width:100%}
+}
+</style>
 </head>
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<div class="gp-topbar gp-topbar-3d"><div class="gp-topbar-inner"><div class="gp-tb-left"><a class="gp-logo gp-logo-mini" href="index.html" aria-label="가설파트너"><span class="gp-li"></span><span class="gp-lt"><b>가설파트너</b><small>GASEOL PARTNER</small></span></a><a class="gp-back" href="index.html">← 목록으로</a></div><div class="gp-tb-left"><a class="gp-tb-cta" href="https://gaseolpartner.com/pages/structureatuntroduction" target="_blank" rel="noopener">정식 구조검토 의뢰</a><a class="gp-hide-m" href="https://gaseolpartner.com"><span class="dot"></span>가설파트너 홈페이지 ↗</a><span class="gp-copy gp-hide-m">ⓒ <span class="gp-year">2026</span> 가설파트너</span></div></div></div>
+
     <!-- 선택 화면 -->
     <div class="selection-screen" id="selectionScreen">
         <div class="company-header">
-            <h1 class="company-name">HJ구조&가설파트너</h1>
+            <h1 class="company-name">HJ구조기술사사무소 · 가설파트너</h1>
         </div>
         <div class="selection-container">
             <h1 class="selection-title">시스템 비계 구조 계산</h1>
@@ -1012,11 +1026,11 @@
             <div style="margin-top: 50px; text-align: center; color: #666;">
                 <p>구조 검토서 및 프로그램 문의</p>
                 <p style="color: #888; margin-top: 10px;">
-                    📞 010-7970-2108 | ✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb9d98cacac9bb959a8d9e89d5989496">[email&#160;protected]</a> | 
-                    🌐 <a href="https://gaseolpartner.com" target="_blank" style="color: #ff8800; text-decoration: none;">gaseolpartner.com</a>
+                    📞 010-7970-2108 | ✉️ <a href="mailto:fc112@naver.com" style="color:inherit">fc112@naver.com</a> | 
+                    🌐 <a href="https://gaseolpartner.com" target="_blank" style="color: #F2B705; text-decoration: none;">gaseolpartner.com</a>
                 </p>
                 <p style="color: #888; margin-top: 10px; font-size: 12px;">
-                    💬 오픈카카오: <a href="https://open.kakao.com/o/sq6cfvBh" target="_blank" style="color: #ff8800; text-decoration: none;">구조검토 문의</a>
+                    💬 카카오톡 채널: <a href="https://pf.kakao.com/_xovuVG/chat" target="_blank" style="color: #F2B705; text-decoration: none;">구조검토 문의</a>
                 </p>
             </div>
             <!-- 최근 프로젝트 -->
@@ -1026,12 +1040,12 @@
         </div>
         
         <div class="copyright-notice">
-            © 2025 HJ구조&가설파트너. All rights reserved.<br>
-            본 프로그램의 모든 저작권은 HJ구조&가설파트너에 있습니다.<br>
+            © <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너. All rights reserved.<br>
+            본 프로그램의 모든 저작권은 HJ구조기술사사무소 · 가설파트너에 있습니다.<br>
             무단 복제 및 배포를 금지합니다.<br>
             <span style="font-size: 9px; color: #ff8888;">
                 ※ 본 프로그램의 계산 결과는 참고용 보고서이며, 현장 조건에 따라 상이할 수 있으므로<br>
-                실제 시공 시 HJ구조사무실의 정식 구조계산서를 받으시기 바랍니다.<br>
+                실제 시공 시 HJ구조기술사사무소의 정식 구조계산서를 받으시기 바랍니다.<br>
                 본 프로그램의 보고서는 관공서 제출용으로 사용할 수 없습니다.
             </span>
         </div>
@@ -1040,7 +1054,7 @@
     <!-- 메인 작업 화면 -->
     <div class="workspace" id="workspace">
         <div class="company-header">
-            <h1 class="company-name">HJ구조&가설파트너</h1>
+            <h1 class="company-name">HJ구조기술사사무소 · 가설파트너</h1>
         </div>
         <button class="back-button" onclick="goBack()">← 돌아가기</button>
         
@@ -1282,7 +1296,7 @@
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
                     <!-- 하중 계산 -->
                     <div class="calculation-info">
-                        <h4 style="color: #ff8800; margin-bottom: 10px;">하중 계산</h4>
+                        <h4 style="color: #F2B705; margin-bottom: 10px;">하중 계산</h4>
                         <div class="calc-item">
                             <span class="calc-label">고정하중 (발판+비계):</span>
                             <span class="calc-value" id="dead-load">0.2 kN/m²</span>
@@ -1297,13 +1311,13 @@
                         </div>
                         <div class="calc-item" style="border-top: 1px solid #444; margin-top: 5px; padding-top: 5px;">
                             <span class="calc-label"><strong>설계하중:</strong></span>
-                            <span class="calc-value" id="total-load" style="color: #ff8800;">3.70 kN/m²</span>
+                            <span class="calc-value" id="total-load" style="color: #F2B705;">3.70 kN/m²</span>
                         </div>
                     </div>
                     
                     <!-- 구조 분석 -->
                     <div class="structure-analysis">
-                        <h4 style="color: #ff8800; margin-bottom: 20px; text-align: center;">구조 분석</h4>
+                        <h4 style="color: #F2B705; margin-bottom: 20px; text-align: center;">구조 분석</h4>
                         <div class="analysis-grid">
                             <div class="analysis-item">
                                 <p>응력비</p>
@@ -1348,7 +1362,7 @@
                         <p>대각재: <span class="value-display" id="diagonal-spec">Φ 34.0 × 2.0t (STK500)</span></p>
                         <p style="font-size: 12px; color: #888; margin-top: 5px;">
                             허용 압축하중: <span id="allow-compression">42.5 kN</span>
-                            <span style="color: #00ff88;">(안전인증)</span>
+                            <span style="color: #F2B705;">(안전인증)</span>
                         </p>
                     </div>
                     
@@ -1366,7 +1380,7 @@
                         <p>수평 간격: <span class="value-display" id="tie-horizontal-display">1817 mm</span></p>
                         <p>수직 간격: <span class="value-display" id="tie-vertical-display">3800 mm</span></p>
                         <p>고정 방법: <span class="value-display">M12 앵커볼트</span></p>
-                        <p style="font-size: 12px; color: #ff8800; margin-top: 5px;">※ 벽이음철물은 영구구조물에 견고히 고정</p>
+                        <p style="font-size: 12px; color: #F2B705; margin-top: 5px;">※ 벽이음철물은 영구구조물에 견고히 고정</p>
                     </div>
                     
                     <div class="diagram-item active">
@@ -1387,7 +1401,7 @@
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
                     <!-- 보조 설계 정보 -->
                     <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 5px; padding: 20px;">
-                        <h4 style="color: #ff8800; margin-bottom: 15px;">📋 설계 정보</h4>
+                        <h4 style="color: #F2B705; margin-bottom: 15px;">📋 설계 정보</h4>
                         <div style="line-height: 1.8;">
                             <p>🏗️ 비계 형식: <span style="color: #fff; font-weight: bold;" id="scaffold-info">시스템 비계</span></p>
                             <p>📏 총 설치높이: <span style="color: #fff; font-weight: bold;" id="total-height">30.7 m</span></p>
@@ -1399,7 +1413,7 @@
                     
                     <!-- 수직재 1본의 하중 상세 -->
                     <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 5px; padding: 20px;">
-                        <h4 style="color: #ff8800; margin-bottom: 15px;">📊 수직재 1본의 하중 (Pv)</h4>
+                        <h4 style="color: #F2B705; margin-bottom: 15px;">📊 수직재 1본의 하중 (Pv)</h4>
                         <div style="line-height: 1.8; font-size: 14px;">
                             <p>작업하중: <span style="color: #fff;" id="pv-work">8.69 kN</span></p>
                             <p>발판하중: <span style="color: #fff;" id="pv-deck">2.79 kN</span></p>
@@ -1407,7 +1421,7 @@
                             <p>수평재 자중: <span style="color: #fff;" id="pv-horizontal">0.93 kN</span></p>
                             <p>대각재 자중: <span style="color: #fff;" id="pv-diagonal">2.20 kN</span></p>
                             <p style="border-top: 1px solid #444; margin-top: 10px; padding-top: 10px;">
-                                <strong>합계: <span style="color: #ff8800;" id="pv-total">15.54 kN</span></strong>
+                                <strong>합계: <span style="color: #F2B705;" id="pv-total">15.54 kN</span></strong>
                             </p>
                             <p style="margin-top: 10px;">
                                 허용하중: <span style="color: #fff;" id="pv-allowable">42.5 kN</span><br>
@@ -1423,16 +1437,16 @@
         <div class="footer-info">
             <p>구조 검토서 및 프로그램 문의: 
                 <a href="tel:010-7970-2108">010-7970-2108</a> | 
-                <a href="/cdn-cgi/l/email-protection#214742101013614f405744530f424e4c"><span class="__cf_email__" data-cfemail="c6a0a5f7f7f486a8a7b0a3b4e8a5a9ab">[email&#160;protected]</span></a> | 
+                <a href="mailto:fc112@naver.com">fc112@naver.com</a> | 
                 <a href="https://gaseolpartner.com" target="_blank">gaseolpartner.com</a> | 
-                <a href="https://open.kakao.com/o/sq6cfvBh" target="_blank">오픈카카오</a>
+                <a href="https://pf.kakao.com/_xovuVG/chat" target="_blank">카카오톡 채널</a>
             </p>
             <p style="margin-top: 5px; font-size: 10px;">
-                © 2025 HJ구조&가설파트너. 본 프로그램의 모든 권리는 HJ구조&가설파트너에 있습니다. (v2.1)
+                © <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너. 본 프로그램의 모든 권리는 HJ구조기술사사무소 · 가설파트너에 있습니다. (v2.1)
             </p>
             <p style="margin-top: 5px; font-size: 9px; color: #ff8888;">
                 ※ 본 프로그램의 계산 결과는 참고용 보고서이며, 현장의 조건에 따라 구조검토가 상이할 수 있으므로<br>
-                실제 시공 시에는 반드시 HJ구조사무실의 정식 구조계산서를 받으시기 바랍니다.<br>
+                실제 시공 시에는 반드시 HJ구조기술사사무소의 정식 구조계산서를 받으시기 바랍니다.<br>
                 본 프로그램의 보고서는 관공서 제출용으로 사용할 수 없습니다.
             </p>
         </div>
@@ -1440,7 +1454,7 @@
     
     <!-- 프로젝트 관리 모달 -->
     <div class="project-modal" id="projectModal">
-        <h3 style="color: #ff8800; margin-bottom: 20px;">프로젝트 관리</h3>
+        <h3 style="color: #F2B705; margin-bottom: 20px;">프로젝트 관리</h3>
         <div class="project-list" id="projectList">
             <!-- 프로젝트 목록이 여기에 동적으로 추가됨 -->
         </div>
@@ -1499,7 +1513,7 @@
                 
                 <div style="text-align: center; margin: 20px 0; padding: 20px; background: #f0f0f0; border-radius: 5px;">
                     <p style="color: #333; font-size: 16px; margin-bottom: 10px;">
-                        <strong>📞 의뢰서 제출 후 HJ구조사무실에서 기재하신 연락처로 연락드립니다.</strong>
+                        <strong>📞 의뢰서 제출 후 HJ구조기술사사무소에서 기재하신 연락처로 연락드립니다.</strong>
                     </p>
                     <p style="color: #ff0000; font-weight: bold; font-size: 14px; margin: 10px 0;">
                         정식 구조계산서는 구조기술사가 작성하며, 관공서 제출이 가능합니다.
@@ -1510,10 +1524,10 @@
                 </div>
                 
                 <div style="display: flex; gap: 20px; justify-content: center; margin: 30px 0;">
-                    <button type="button" onclick="sendRequestByEmail()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="background: #0066cc; color: #fff; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,102,204,0.3);">
+                    <button type="button" onclick="sendRequestByEmail()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="background: #F2B705; color: #1B1B1B; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(27, 27, 27,0.3);">
                         <div style="font-size: 24px; margin-bottom: 5px;">✉️</div>
                         이메일로 제출
-                        <div style="font-size: 12px; font-weight: normal; margin-top: 5px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="deb8bdefefec9eb0bfa8bbacf0bdb1b3">[email&#160;protected]</a></div>
+                        <div style="font-size: 12px; font-weight: normal; margin-top: 5px;"><a href="mailto:fc112@naver.com" style="color:inherit">fc112@naver.com</a></div>
                     </button>
                     <button type="button" onclick="sendRequestByKakao()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="background: #f9e000; color: #3c1e1e; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,224,0,0.3);">
                         <div style="font-size: 24px; margin-bottom: 5px;">💬</div>
@@ -1527,7 +1541,7 @@
     
     <!-- 단축키 정보 -->
     <div class="shortcut-info" id="shortcutInfo">
-        <h4 style="color: #ff8800; margin-bottom: 10px;">단축키</h4>
+        <h4 style="color: #F2B705; margin-bottom: 10px;">단축키</h4>
         <p>Ctrl + S: 프로젝트 저장</p>
         <p>Ctrl + O: 프로젝트 열기</p>
         <p>Ctrl + P: 인쇄</p>
@@ -1538,13 +1552,13 @@
         <p>Shift + Tab: 이전 입력란</p>
     </div>
     
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // 초기 보안 경고
         console.log('%c⚠️ 정지!', 'color: red; font-size: 50px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);');
         console.log('%c이것은 브라우저 개발자 도구입니다.', 'color: red; font-size: 20px;');
         console.log('%c누군가 당신에게 여기에 무언가를 복사-붙여넣기하라고 했다면, 그것은 사기입니다.', 'color: red; font-size: 16px;');
         console.log('%c본 프로그램의 모든 코드는 저작권으로 보호됩니다.', 'color: red; font-size: 16px;');
-        console.log('%c© 2025 HJ구조&가설파트너. All rights reserved.', 'color: #ff8800; font-size: 16px; font-weight: bold;');
+        console.log('%c© ' + new Date().getFullYear() + ' HJ구조기술사사무소 · 가설파트너. All rights reserved.', 'color: #F2B705; font-size: 16px; font-weight: bold;');
         console.log('%c무단 복제 및 배포 시 법적 조치를 취할 수 있습니다.', 'color: #ff4444; font-size: 14px;');
         
         // 보안 초기화
@@ -1554,7 +1568,7 @@
     
     try {
         // 타이틀 보호 - 간단한 방법으로만
-        const originalTitle = '시스템 비계 구조 계산 v2.1 - HJ구조&가설파트너';
+        const originalTitle = '시스템 비계 구조 계산 v2.1 - HJ구조기술사사무소 · 가설파트너';
         
         // 타이틀 변경 감지 및 복원 (이것만으로도 충분함)
         setInterval(() => {
@@ -1569,7 +1583,7 @@
             const expectedFileName = '시스템비계 구조계산 (가설파트너&HJ구조).html';
             
             if (fileName && decodeURIComponent(fileName) !== expectedFileName && fileName !== '') {
-                console.warn(`⚠️ 경고: 파일명이 변경되었습니다!\n원본 파일명: ${expectedFileName}\n현재 파일명: ${decodeURIComponent(fileName)}\n\n© 2025 HJ구조&가설파트너`);
+                console.warn(`⚠️ 경고: 파일명이 변경되었습니다!\n원본 파일명: ${expectedFileName}\n현재 파일명: ${decodeURIComponent(fileName)}\n\n© ${new Date().getFullYear()} HJ구조기술사사무소 · 가설파트너`);
             }
         }
         
@@ -2257,7 +2271,7 @@ function saveProject() {
        structures: structures,
        currentIndex: currentStructureIndex,
        version: 'v2.1',
-       copyright: '© 2025 HJ구조&가설파트너'
+       copyright: '© ' + new Date().getFullYear() + ' HJ구조기술사사무소 · 가설파트너'
    };
    
    // Google Analytics 추적
@@ -2603,20 +2617,20 @@ updateCalculations();
             saveCurrentStructure();
             
             let summaryHTML = `
-                <h2 style="color: #ff8800; text-align: center; margin-bottom: 20px;">프로젝트 구조물 목록</h2>
+                <h2 style="color: #F2B705; text-align: center; margin-bottom: 20px;">프로젝트 구조물 목록</h2>
                 <p style="text-align: center; margin-bottom: 20px;">현재 프로젝트: ${structures.length}개 구조물</p>
                 <div style="overflow-x: auto;">
                 <table class="report-table" style="width: 100%; background: #f9f9f9; font-size: 13px;">
                     <thead>
                         <tr>
-                            <th style="background: #ff8800; color: #000;">번호</th>
-<th style="background: #ff8800; color: #000;">구조 타입</th>
-<th style="background: #ff8800; color: #000;">설치 간격</th>
-<th style="background: #ff8800; color: #000;">작업 조건</th>
-<th style="background: #ff8800; color: #000;">풍하중 조건</th>
-<th style="background: #ff8800; color: #000;">벽이음/가새</th>
-<th style="background: #ff8800; color: #000;">대각재 검토</th>
-<th style="background: #ff8800; color: #000;">작업</th>
+                            <th style="background: #F2B705; color: #000;">번호</th>
+<th style="background: #F2B705; color: #000;">구조 타입</th>
+<th style="background: #F2B705; color: #000;">설치 간격</th>
+<th style="background: #F2B705; color: #000;">작업 조건</th>
+<th style="background: #F2B705; color: #000;">풍하중 조건</th>
+<th style="background: #F2B705; color: #000;">벽이음/가새</th>
+<th style="background: #F2B705; color: #000;">대각재 검토</th>
+<th style="background: #F2B705; color: #000;">작업</th>
                         </tr>
                     </thead>
                     <tbody>`;
@@ -2639,7 +2653,7 @@ updateCalculations();
 <td>${windText}</td>
 <td>대각재: ${struct.data.diagonalSpan || 8}스팬<br>응력: ${struct.data.diagonalStress || 'N/A'}</td>
 <td style="text-align: center;">
-    <button onclick="loadStructureFromSummary(${index})" style="background: #ff8800; color: #000; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px;">편집</button>
+    <button onclick="loadStructureFromSummary(${index})" style="background: #F2B705; color: #000; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px;">편집</button>
 </td>
                     </tr>`;
             });
@@ -2700,7 +2714,7 @@ if (typeof gtag !== 'undefined') {
             
             reportContent.innerHTML = `
                 <div class="report-header">
-                    <h1 style="font-size: 20px; color: #ff8800; margin-bottom: 5px;">HJ구조&가설파트너</h1>
+                    <h1 style="font-size: 20px; color: #F2B705; margin-bottom: 5px;">HJ구조기술사사무소 · 가설파트너</h1>
                     <h1 class="report-title">시스템 비계 보고서</h1>
                     <p>구조 검토서 및 프로그램 문의</p>
                     <p>📞 010-7970-2108 | ✉️ fc112@naver.com</p>
@@ -3011,9 +3025,9 @@ if (typeof gtag !== 'undefined') {
                         <p>실제 시공을 위한 정식 구조계산서가 아니므로 관공서 제출용으로 사용할 수 없습니다.</p>
                         <p style="background: #fff; padding: 10px; margin: 15px 0; border: 2px solid #ff0000; border-radius: 5px;">
                             정식 구조계산서가 필요하신 경우<br>
-                            <span style="color: #ff8800; font-size: 18px;">【구조기술사 의뢰하기】</span>를 통해 신청하시기 바랍니다.
+                            <span style="color: #F2B705; font-size: 18px;">【구조기술사 의뢰하기】</span>를 통해 신청하시기 바랍니다.
                         </p>
-                        <button onclick="closeReport(); openRequestForm();" style="background: #ff8800; color: #000; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer; margin: 10px 0;">
+                        <button onclick="closeReport(); openRequestForm();" style="background: #F2B705; color: #000; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer; margin: 10px 0;">
                             📋 구조기술사 의뢰하기
                         </button>
                         <p>의뢰 문의: 010-7970-2108 | fc112@naver.com</p>
@@ -3021,7 +3035,7 @@ if (typeof gtag !== 'undefined') {
                 </div>
                 
                 <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f9f9f9;">
-                    <button onclick="window.print()" style="background: #ff8800; color: #000; border: none; padding: 10px 30px; font-size: 16px; cursor: pointer; border-radius: 5px;">
+                    <button onclick="window.print()" style="background: #F2B705; color: #000; border: none; padding: 10px 30px; font-size: 16px; cursor: pointer; border-radius: 5px;">
                         🖨️ 인쇄하기
                     </button>
                     <p style="margin-top: 15px; color: #666; font-size: 14px;">
@@ -3138,7 +3152,7 @@ if (typeof gtag !== 'undefined') {
 ================================================================================
 `;
             
-            const emailBody = `HJ구조&가설파트너
+            const emailBody = `HJ구조기술사사무소 · 가설파트너
 구조검토 의뢰서
 
 [의뢰인 정보]
@@ -3185,22 +3199,22 @@ ${reviewTable}
 [중요 고지사항]
 본 의뢰서의 계산값은 프로그램에 의한 참고 자료이며,
 현장의 조건에 따라 구조검토가 상이할 수 있습니다.
-실제 시공 시에는 반드시 HJ구조사무실의 검토를 받으시기 바랍니다.
+실제 시공 시에는 반드시 HJ구조기술사사무소의 검토를 받으시기 바랍니다.
 
 ※ 본 프로그램의 보고서는 참고용이며 정식 구조계산서가 아닙니다.
 정식 구조계산서는 구조기술사 의뢰를 통해 발급받으셔야 합니다.
 ============================================
 
 발송일시: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}
-프로그램: HJ구조&가설파트너 시스템 비계 v2.1
-저작권: © 2025 HJ구조&가설파트너. All rights reserved.
+프로그램: HJ구조기술사사무소 · 가설파트너 시스템 비계 v2.1
+저작권: © ${new Date().getFullYear()} HJ구조기술사사무소 · 가설파트너. All rights reserved.
 
 [제출 방법]
 1. 이메일: fc112@naver.com
-2. 오픈카카오톡: https://open.kakao.com/o/sq6cfvBh
+2. 카카오톡 채널: https://pf.kakao.com/_xovuVG/chat
 3. 연락처: 010-7970-2108
 
-※ 본 의뢰서는 HJ구조&가설파트너 시스템 비계 프로그램에서 자동 생성되었습니다.`;
+※ 본 의뢰서는 HJ구조기술사사무소 · 가설파트너 시스템 비계 프로그램에서 자동 생성되었습니다.`;
             
             // 파일 다운로드
             const blob = new Blob([emailBody], { type: 'text/plain;charset=utf-8' });
@@ -3233,14 +3247,14 @@ ${reviewTable}
 
 [제출 방법]
 1. 이메일: fc112@naver.com
-2. 오픈카카오톡: https://open.kakao.com/o/sq6cfvBh
+2. 카카오톡 채널: https://pf.kakao.com/_xovuVG/chat
 
 위 채널 중 편하신 방법으로 발송해주세요.
 정식 구조계산서 작성 후 연락드리겠습니다.`);
             
             // 오픈카카오 링크 새 창으로 열기 옵션
             if (confirm('오픈카카오톡으로 바로 이동하시겠습니까?')) {
-                window.open('https://open.kakao.com/o/sq6cfvBh', '_blank');
+                window.open('https://pf.kakao.com/_xovuVG/chat', '_blank');
             }
             return { data, emailBody };
         }
@@ -3272,7 +3286,7 @@ ${reviewTable}
             // 보안 강화 코드
             document.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
-                alert('© 2025 HJ구조&가설파트너\n본 프로그램의 저작권은 보호됩니다.');
+                alert('© ' + new Date().getFullYear() + ' HJ구조기술사사무소 · 가설파트너\n본 프로그램의 저작권은 보호됩니다.');
                 return false;
             });
             
@@ -3369,7 +3383,7 @@ ${reviewTable}
                                 <h1>⚠️ 경고</h1>
                                 <p>개발자 도구 사용이 감지되었습니다.</p>
                                 <p>본 프로그램은 저작권으로 보호되고 있습니다.</p>
-                                <p>© 2025 HJ구조&가설파트너</p>
+                                <p>© ${new Date().getFullYear()} HJ구조기술사사무소 · 가설파트너</p>
                                 <p style="margin-top: 20px; font-size: 16px;">
                                     정상적인 사용을 위해 페이지를 새로고침하세요.
                                 </p>
@@ -3471,9 +3485,10 @@ ${reviewTable}
             updateStructureTabs();
         });
     </script>
+<script>(function(){var y=new Date().getFullYear();document.querySelectorAll('.gp-year').forEach(function(e){e.textContent=y});})();</script>
 </body>
 </html>
 <!--
 ==============================================================
-                 HJ구조&가설파트너
+                 HJ구조기술사사무소 · 가설파트너
 ===================

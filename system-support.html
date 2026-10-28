@@ -8,7 +8,7 @@
 이 파일의 파일명과 내용을 변경하지 마십시오.
 본 프로그램은 저작권법에 의해 보호되고 있습니다.
 
-© 2025 HJ구조&가설파트너. All rights reserved.
+© <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너. All rights reserved.
 
 무단 복제, 수정, 배포 시 법적 처벌을 받을 수 있습니다.
 문의: 010-7970-2108 | fc112@naver.com
@@ -18,20 +18,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HJ구조&가설파트너 - 시스템 동바리 구조 계산 프로그램 v1.00">
-    <meta name="author" content="HJ구조&가설파트너">
+    <meta name="description" content="HJ구조기술사사무소 · 가설파트너 - 시스템 동바리 구조 계산 프로그램 v1.00">
+    <meta name="author" content="HJ구조기술사사무소 · 가설파트너">
     <meta name="keywords" content="시스템동바리, 구조계산, 건설, 가설구조물, 동바리설계">
-    <meta name="copyright" content="© 2025 HJ구조&가설파트너. All rights reserved.">
-    <meta name="generator" content="HJ구조&가설파트너 시스템 동바리 v1.00">
+    <meta name="copyright" content="© HJ구조기술사사무소 · 가설파트너. All rights reserved.">
+    <meta name="generator" content="HJ구조기술사사무소 · 가설파트너 시스템 동바리 v1.00">
     <meta name="application-name" content="시스템 동바리 구조 계산">
-    <meta name="msapplication-tooltip" content="HJ구조&가설파트너 시스템 동바리 구조 계산 프로그램">
-    <meta name="msapplication-TileColor" content="#ff8800">
+    <meta name="msapplication-tooltip" content="HJ구조기술사사무소 · 가설파트너 시스템 동바리 구조 계산 프로그램">
+    <meta name="msapplication-TileColor" content="#1B1B1B">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>시스템 동바리 구조 계산 v1.00 - HJ구조&가설파트너</title>
+    <title>시스템 동바리 구조계산 | 가설파트너</title>
 
     <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9DVT53VFV"></script>
@@ -75,7 +75,7 @@
     background: #1a1a1a;
     color: #fff;
     overflow: hidden;
-    height: 100vh;
+    height: calc(100vh - 40px);
     /* zoom과 transform 관련 줄들을 모두 삭제하거나 주석처리 */
     /* zoom: 0.9; */
     /* -webkit-transform: scale(0.9); */
@@ -98,7 +98,7 @@
         }
         
         body::before {
-            content: "© 2025 HJ구조&가설파트너";
+            content: "© HJ구조기술사사무소 · 가설파트너";
             position: fixed;
             top: 50%;
             left: 50%;
@@ -114,7 +114,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: calc(100vh - 40px);
             background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
         }
         
@@ -125,7 +125,7 @@
         
         .selection-title {
             font-size: 32px;
-            color: #ff8800;
+            color: #F2B705;
             margin-bottom: 50px;
         }
         
@@ -138,8 +138,8 @@
         
         .selection-button {
             background: #1a1a1a;
-            border: 2px solid #ff8800;
-            color: #ff8800;
+            border: 2px solid #F2B705;
+            color: #F2B705;
             padding: 40px 60px;
             font-size: 20px;
             border-radius: 10px;
@@ -150,15 +150,15 @@
         }
         
         .selection-button:hover {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
             transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255,136,0,0.3);
+            box-shadow: 0 10px 30px rgba(242, 183, 5,0.3);
         }
         
         .workspace {
     display: none;
-    height: 100vh;
+    height: calc(100vh - 40px);
     background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
     padding: 10px; /* 패딩 추가 */
 }
@@ -195,7 +195,7 @@
 /* 오른쪽 모니터 콘텐츠는 스크롤 없음 */
 .monitor:last-child .monitor-content {
     overflow-y: hidden;
-    height: calc(100vh - 100px);  /* 120px에서 100px로 조정 */
+    height: calc(100vh - 140px);  /* 120px에서 100px로 조정 */
     display: flex;
     flex-direction: column;
     gap: 10px;  /* 15px에서 10px로 더 줄임 */
@@ -262,7 +262,7 @@
         }
         
         .yoke-type-btn.active {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
         }
         
@@ -273,7 +273,7 @@
         
         .monitor-title {
             font-size: 16px;
-            color: #ff8800;
+            color: #F2B705;
         }
         
         .monitor-content {
@@ -320,7 +320,7 @@
             display: inline-block;
             margin-left: 15px;
             font-size: 18px;
-            color: #ff8800;
+            color: #F2B705;
             font-weight: bold;
         }
         
@@ -342,7 +342,7 @@
             padding: 12px;
             text-align: left;
             border-bottom: 2px solid #444;
-            color: #ff8800;
+            color: #F2B705;
         }
         
         .result-table td {
@@ -351,7 +351,7 @@
         }
         
         .status-ok {
-            color: #ff8800;
+            color: #F2B705;
             font-weight: bold;
         }
         
@@ -361,7 +361,7 @@
         }
         
         .auto-adjust {
-            color: #00aaff;
+            color: #F2B705;
             font-size: 12px;
             margin-left: 10px;
         }
@@ -403,8 +403,8 @@
 }
         
         .ladder-item.active {
-            border-color: #ff8800;
-            box-shadow: 0 0 10px rgba(255,136,0,0.3);
+            border-color: #F2B705;
+            box-shadow: 0 0 10px rgba(242, 183, 5,0.3);
         }
         
         .ladder-item.error {
@@ -438,7 +438,7 @@
         }
         
         .value-chip.selected {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
             font-weight: bold;
         }
@@ -449,8 +449,8 @@
         }
         
         .success-message {
-            background: rgba(255,136,0,0.1);
-            border: 1px solid #ff8800;
+            background: rgba(242, 183, 5,0.1);
+            border: 1px solid #F2B705;
             border-radius: 5px;
             padding: 15px;
             margin: 20px 0;
@@ -469,7 +469,7 @@
         }
         
         .report-button {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
             border: none;
             padding: 15px 40px;
@@ -484,7 +484,7 @@
         
         .report-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(255,136,0,0.4);
+            box-shadow: 0 5px 20px rgba(242, 183, 5,0.4);
         }
         
         .report-button:disabled {
@@ -517,7 +517,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background: #1a1a1a;
-            border: 2px solid #ff8800;
+            border: 2px solid #F2B705;
             border-radius: 10px;
             padding: 30px;
             z-index: 500;
@@ -526,7 +526,7 @@
         }
         
         .support-config-modal h3 {
-            color: #ff8800;
+            color: #F2B705;
             margin-bottom: 20px;
         }
         
@@ -549,13 +549,13 @@
         }
         
         .row-option:hover {
-            border-color: #ff8800;
+            border-color: #F2B705;
         }
         
         .row-option.selected {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
-            border-color: #ff8800;
+            border-color: #F2B705;
         }
         
         .modal-buttons {
@@ -574,7 +574,7 @@
         }
         
         .modal-button.confirm {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
         }
         
@@ -704,7 +704,7 @@
         }
         
         .footer-info a:hover {
-            color: #ff8800;
+            color: #F2B705;
         }
         
         .animate-change {
@@ -717,7 +717,7 @@
                 transform: scale(1);
             }
             50% { 
-                background-color: rgba(255,136,0,0.2);
+                background-color: rgba(242, 183, 5,0.2);
                 transform: scale(1.05);
             }
             100% { 
@@ -764,13 +764,13 @@
         .company-name {
             font-size: 24px;
             font-weight: bold;
-            color: #ff8800;
+            color: #F2B705;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .structure-analysis {
             background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-            border: 1px solid #ff8800;
+            border: 1px solid #F2B705;
             border-radius: 5px;
             padding: 20px;
             margin-top: 20px;
@@ -790,7 +790,7 @@
         }
         
         .analysis-value {
-            color: #ff8800;
+            color: #F2B705;
             font-size: 32px;
             font-weight: bold;
         }
@@ -820,13 +820,13 @@
 }
 
 /* 구조기술사 버튼 강조 */
-.toolbar-button[style*="background: #ff8800"] {
+.toolbar-button[style*="background: #F2B705"] {
     font-weight: bold;
 }
         
         .toolbar-button:hover {
             background: #444;
-            border-color: #ff8800;
+            border-color: #F2B705;
         }
         
         .project-modal {
@@ -836,7 +836,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background: #1a1a1a;
-            border: 2px solid #ff8800;
+            border: 2px solid #F2B705;
             border-radius: 10px;
             padding: 30px;
             z-index: 1000;
@@ -864,7 +864,7 @@
         }
         
         .project-item:hover {
-            border-color: #ff8800;
+            border-color: #F2B705;
         }
         
         .project-info {
@@ -912,9 +912,9 @@
         }
         
         .structure-tab.active {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
-            border-color: #ff8800;
+            border-color: #F2B705;
         }
         
         .structure-tab-close {
@@ -934,8 +934,8 @@
         }
         
         .add-structure-btn:hover {
-            border-color: #ff8800;
-            color: #ff8800;
+            border-color: #F2B705;
+            color: #F2B705;
         }
         
         .shortcut-info {
@@ -986,7 +986,7 @@
         
         .modal-content {
             background: #1a1a1a;
-            border: 2px solid #ff8800;
+            border: 2px solid #F2B705;
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
@@ -1003,7 +1003,7 @@
         }
         
         .modal-header h2 {
-            color: #ff8800;
+            color: #F2B705;
             margin: 0;
         }
         
@@ -1024,8 +1024,8 @@
         
         .modal .selection-button {
             background: #1a1a1a;
-            border: 2px solid #ff8800;
-            color: #ff8800;
+            border: 2px solid #F2B705;
+            color: #F2B705;
             padding: 40px 60px;
             font-size: 20px;
             border-radius: 10px;
@@ -1036,10 +1036,10 @@
         }
         
         .modal .selection-button:hover {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
             transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255,136,0,0.3);
+            box-shadow: 0 10px 30px rgba(242, 183, 5,0.3);
         }
 
         .brace-info {
@@ -1077,7 +1077,7 @@
         }
 
         .official-request-button {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
             border: none;
             padding: 20px 40px;
@@ -1088,7 +1088,7 @@
             margin: 20px auto;
             display: block;
             transition: all 0.3s;
-            box-shadow: 0 5px 20px rgba(255,136,0,0.4);
+            box-shadow: 0 5px 20px rgba(242, 183, 5,0.4);
             animation: pulse 2s infinite;
         }
         
@@ -1123,14 +1123,14 @@
         }
         
         .project-type-btn:hover {
-            border-color: #ff8800;
+            border-color: #F2B705;
             color: #fff;
         }
         
         .project-type-btn.active {
-            background: #ff8800;
+            background: #F2B705;
             color: #000;
-            border-color: #ff8800;
+            border-color: #F2B705;
             font-weight: bold;
         }
         
@@ -1141,13 +1141,13 @@
         }
 
         .dynamic-calc-info {
-            background: rgba(0,200,255,0.1);
-            border: 1px solid #00aaff;
+            background: rgba(242, 183, 5,0.1);
+            border: 1px solid #F2B705;
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
             font-size: 12px;
-            color: #88ddff;
+            color: #F2B705;
         }
 
         .recalc-notice {
@@ -1286,12 +1286,26 @@
 
               
     </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="gp-common.css">
+<style id="gp-page">
+body{height:100vh}
+.selection-screen,.workspace{position:relative}
+@media(max-width:700px){
+ .selection-screen{overflow-y:auto;flex-direction:column;align-items:center;justify-content:flex-start;padding:16px 12px 28px;box-sizing:border-box}
+ .selection-screen .company-header{position:static;transform:none;margin:0 0 6px}
+ .selection-screen .company-name{font-size:18px}
+ .selection-screen .copyright-notice{position:static;transform:none;margin:18px auto 0;max-width:100%}
+}
+</style>
 </head>
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<div class="gp-topbar gp-topbar-3d"><div class="gp-topbar-inner"><div class="gp-tb-left"><a class="gp-logo gp-logo-mini" href="index.html" aria-label="가설파트너"><span class="gp-li"></span><span class="gp-lt"><b>가설파트너</b><small>GASEOL PARTNER</small></span></a><a class="gp-back" href="index.html">← 목록으로</a></div><div class="gp-tb-left"><a class="gp-tb-cta" href="https://gaseolpartner.com/pages/structureatuntroduction" target="_blank" rel="noopener">정식 구조검토 의뢰</a><a class="gp-hide-m" href="https://gaseolpartner.com"><span class="dot"></span>가설파트너 홈페이지 ↗</a><span class="gp-copy gp-hide-m">ⓒ <span class="gp-year">2026</span> 가설파트너</span></div></div></div>
+
     <!-- 선택 화면 -->
     <div class="selection-screen" id="selectionScreen">
         <div class="company-header">
-            <h1 class="company-name">HJ구조&가설파트너</h1>
+            <h1 class="company-name">HJ구조기술사사무소 · 가설파트너</h1>
         </div>
         <div class="selection-container">
             <h1 class="selection-title">시스템 동바리 구조 계산</h1>
@@ -1320,10 +1334,10 @@
                 <p>정식 구조계산서 및 프로그램 문의</p>
                 <p style="color: #888; margin-top: 10px;">
                     📞 010-7970-2108 | ✉️ fc112@naver.com | 
-                    🌐 <a href="https://gaseolpartner.com" target="_blank" style="color: #ff8800; text-decoration: none;">gaseolpartner.com</a>
+                    🌐 <a href="https://gaseolpartner.com" target="_blank" style="color: #F2B705; text-decoration: none;">gaseolpartner.com</a>
                 </p>
                 <p style="color: #888; margin-top: 10px; font-size: 12px;">
-                    💬 오픈카카오: <a href="https://open.kakao.com/o/sq6cfvBh" target="_blank" style="color: #ff8800; text-decoration: none;">구조검토 문의</a>
+                    💬 카카오톡 채널: <a href="https://pf.kakao.com/_xovuVG/chat" target="_blank" style="color: #F2B705; text-decoration: none;">구조검토 문의</a>
                 </p>
             </div>
             <div style="margin-top: 30px;">
@@ -1336,7 +1350,7 @@
     <!-- 메인 작업 화면 -->
     <div class="workspace" id="workspace">
         <div class="company-header">
-            <h1 class="company-name">HJ구조&가설파트너</h1>
+            <h1 class="company-name">HJ구조기술사사무소 · 가설파트너</h1>
         </div>
         <button class="back-button" onclick="goBack()">← 돌아가기</button>
         
@@ -1347,7 +1361,7 @@
     <button class="toolbar-button" onclick="window.print()">🖨️ 인쇄</button>
     <button class="toolbar-button" onclick="generateReport()">📄 보고서</button>
     <button class="toolbar-button" onclick="showStructureSummary()">📊 구조물목록</button>
-    <button class="toolbar-button" style="background: #ff8800; color: #000;" onclick="openRequestForm()">📋 구조기술사</button>
+    <button class="toolbar-button" style="background: #F2B705; color: #000;" onclick="openRequestForm()">📋 구조기술사</button>
     <button class="toolbar-button" onclick="toggleShortcuts()">⌨️ 단축키</button>
     <button class="toolbar-button" onclick="resetAll()">🔄 초기화</button>
 </div>
@@ -1496,7 +1510,7 @@
                 
                 <!-- 구조 분석 -->
 <div class="structure-analysis">
-    <h4 style="color: #ff8800; margin-bottom: 20px; text-align: center;">📊 구조 분석</h4>
+    <h4 style="color: #F2B705; margin-bottom: 20px; text-align: center;">📊 구조 분석</h4>
     <div class="analysis-grid">
         <div class="analysis-item">
             <p>안전율</p>
@@ -1591,7 +1605,7 @@
     <h3 id="support-ladder-title">4. 동바리 간격 계산</h3>
     <p>자동 조정: <span class="status-ok">정상 작동</span></p>
     <p id="support-display">현재: 1524mm</p>
-    <p id="support-rows" style="font-size: 14px; color: #ff8800; margin-top: 5px; display: none;">2열 배치</p>
+    <p id="support-rows" style="font-size: 14px; color: #F2B705; margin-top: 5px; display: none;">2열 배치</p>
     <div class="available-values">
         <strong>사용 가능 규격:</strong>
         <span class="value-chip" onclick="selectSupport(1829)">1829mm</span>
@@ -1608,7 +1622,7 @@
                 
                 <!-- 보조 설계 정보 -->
 <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 5px; padding: 15px; margin-top: 15px;">
-    <h4 style="color: #ff8800; margin-bottom: 10px; font-size: 14px;">📋 보조 설계 정보</h4>
+    <h4 style="color: #F2B705; margin-bottom: 10px; font-size: 14px;">📋 보조 설계 정보</h4>
     <div style="line-height: 1.6; font-size: 13px;">
         <p>🔗 수평재간격: <span style="color: #fff; font-weight: bold;">1725 mm</span></p>
         <p>📐 가새 X방향: <span style="color: #fff; font-weight: bold;" id="brace-x">3 개</span><span class="brace-info" id="brace-x-info"></span></p>
@@ -1620,7 +1634,7 @@
 
 <!-- 하중 계산 -->
 <div class="calculation-info">
-    <h4 style="color: #ff8800; margin-bottom: 10px;">하중 계산</h4>
+    <h4 style="color: #F2B705; margin-bottom: 10px;">하중 계산</h4>
     <div class="calc-item">
         <span class="calc-label">콘크리트 하중:</span>
         <span class="calc-value" id="concrete-load">7.2 kN/m²</span>
@@ -1635,7 +1649,7 @@
     </div>                 
     <div class="calc-item" style="border-top: 1px solid #444; margin-top: 5px; padding-top: 5px;">
         <span class="calc-label"><strong>총 설계하중:</strong></span>
-        <span class="calc-value" id="total-load" style="color: #ff8800;">10.1 kN/m²</span>
+        <span class="calc-value" id="total-load" style="color: #F2B705;">10.1 kN/m²</span>
     </div>
 </div> <!-- 하중 계산 끝 -->
             </div>
@@ -1646,10 +1660,10 @@
                 <a href="tel:010-7970-2108">010-7970-2108</a> | 
                 <a href="mailto:fc112@naver.com">fc112@naver.com</a> | 
                 <a href="https://gaseolpartner.com" target="_blank">gaseolpartner.com</a> | 
-                <a href="https://open.kakao.com/o/sq6cfvBh" target="_blank">오픈카카오</a>
+                <a href="https://pf.kakao.com/_xovuVG/chat" target="_blank">카카오톡 채널</a>
             </p>
             <p style="margin-top: 5px; font-size: 10px;">
-                © 2025 HJ구조&가설파트너. 본 프로그램의 모든 권리는 HJ구조&가설파트너에 있습니다. (v1.00)
+                © <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너. 본 프로그램의 모든 권리는 HJ구조기술사사무소 · 가설파트너에 있습니다. (v1.00)
             </p>
             <p style="margin-top: 5px; font-size: 9px; color: #ff8888;">
                 ※ 본 프로그램의 계산 결과는 참고용이므로 현장에서 사용이 불가합니다.<br>
@@ -1686,7 +1700,7 @@
     
     <!-- 프로젝트 관리 모달 -->
     <div class="project-modal" id="projectModal">
-        <h3 style="color: #ff8800; margin-bottom: 20px;">프로젝트 관리</h3>
+        <h3 style="color: #F2B705; margin-bottom: 20px;">프로젝트 관리</h3>
         <div class="project-list" id="projectList">
             <!-- 프로젝트 목록이 여기에 동적으로 추가됨 -->
         </div>
@@ -1756,7 +1770,7 @@
                 </div>
                 
                 <div style="display: flex; gap: 20px; justify-content: center; margin: 30px 0;">
-                    <button type="button" onclick="sendRequestByEmail()" style="background: #0066cc; color: #fff; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,102,204,0.3);">
+                    <button type="button" onclick="sendRequestByEmail()" style="background: #F2B705; color: #1B1B1B; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(27, 27, 27,0.3);">
                         <div style="font-size: 24px; margin-bottom: 5px;">✉️</div>
                         이메일로 제출
                         <div style="font-size: 12px; font-weight: normal; margin-top: 5px;">fc112@naver.com</div>
@@ -1774,7 +1788,7 @@
     
     <!-- 단축키 정보 -->
     <div class="shortcut-info" id="shortcutInfo">
-        <h4 style="color: #ff8800; margin-bottom: 10px;">단축키</h4>
+        <h4 style="color: #F2B705; margin-bottom: 10px;">단축키</h4>
         <p>Ctrl + S: 프로젝트 저장</p>
         <p>Ctrl + O: 프로젝트 열기</p>
         <p>Ctrl + P: 인쇄</p>
@@ -1793,13 +1807,13 @@
         console.log('%c이것은 브라우저 개발자 도구입니다.', 'color: red; font-size: 20px;');
         console.log('%c누군가 당신에게 여기에 무언가를 복사-붙여넣기하라고 했다면, 그것은 사기입니다.', 'color: red; font-size: 16px;');
         console.log('%c본 프로그램의 모든 코드는 저작권으로 보호됩니다.', 'color: red; font-size: 16px;');
-        console.log('%c© 2025 HJ구조&가설파트너. All rights reserved.', 'color: #ff8800; font-size: 16px; font-weight: bold;');
+        console.log('%c© ' + new Date().getFullYear() + ' HJ구조기술사사무소 · 가설파트너. All rights reserved.', 'color: #F2B705; font-size: 16px; font-weight: bold;');
         console.log('%c무단 복제 및 배포 시 법적 조치를 취할 수 있습니다.', 'color: #ff4444; font-size: 14px;');
         
         // 보안 초기화
         (function() {
             // 타이틀 보호
-            const originalTitle = '시스템 동바리 구조 계산 v1.00 - HJ구조&가설파트너';
+            const originalTitle = '시스템 동바리 구조 계산 v1.00 - HJ구조기술사사무소 · 가설파트너';
             Object.defineProperty(document, 'title', {
                 get: function() { return originalTitle; },
                 set: function() { 
@@ -1821,7 +1835,7 @@
                 const expectedFileName = '시스템동바리 구조계산 (가설파트너&HJ구조).html';
                 
                 if (fileName && decodeURIComponent(fileName) !== expectedFileName && fileName !== '') {
-                    console.warn(`⚠️ 경고: 파일명이 변경되었습니다!\n원본 파일명: ${expectedFileName}\n현재 파일명: ${decodeURIComponent(fileName)}\n\n© 2025 HJ구조&가설파트너`);
+                    console.warn(`⚠️ 경고: 파일명이 변경되었습니다!\n원본 파일명: ${expectedFileName}\n현재 파일명: ${decodeURIComponent(fileName)}\n\n© ${new Date().getFullYear()} HJ구조기술사사무소 · 가설파트너`);
                 }
             }
             
@@ -7094,9 +7108,9 @@ function showOptimizationNotice(newYoke, newSupport, oldYoke, oldSupport) {
             ${changes.join(', ')}
         `;
         recalcNotice.style.display = 'block';
-        recalcNotice.style.background = 'rgba(0,200,255,0.1)';
-        recalcNotice.style.borderColor = '#00ccff';
-        recalcNotice.style.color = '#00ccff';
+        recalcNotice.style.background = 'rgba(242,183,5,0.1)';
+        recalcNotice.style.borderColor = '#F2B705';
+        recalcNotice.style.color = '#F2B705';
         
         // 7초 후 자동 숨김
         setTimeout(() => {
@@ -7303,25 +7317,25 @@ if (structureAnalysis && structureAnalysis.parentNode) {
         <h4 style="color: #ffaa00; margin-bottom: 10px;">⚡ 하중률 분석</h4>
         <div class="calc-item">
             <span class="calc-label">합판 휨응력:</span>
-            <span class="calc-value" style="color: ${plywoodCheck.ratio >= 95 ? '#ff8800' : (plywoodCheck.ratio >= 90 ? '#ffaa00' : '#ff8800')}">
+            <span class="calc-value" style="color: ${plywoodCheck.ratio >= 95 ? '#F2B705' : (plywoodCheck.ratio >= 90 ? '#ffaa00' : '#F2B705')}">
                 ${plywoodCheck.stress.toFixed(1)}MPa(실제) / ${plywoodCheck.allowable}MPa(허용) = ${plywoodCheck.ratio.toFixed(1)}%
             </span>
         </div>
         <div class="calc-item">
             <span class="calc-label">장선 하중률:</span>
-            <span class="calc-value" style="color: ${joistLoadRatio >= 95 ? '#ff8800' : (joistLoadRatio >= 90 ? '#ffaa00' : '#ff8800')}">
+            <span class="calc-value" style="color: ${joistLoadRatio >= 95 ? '#F2B705' : (joistLoadRatio >= 90 ? '#ffaa00' : '#F2B705')}">
                 ${joistAreaLoad.toFixed(1)}kN(실제) / ${joistAllowableLoad.toFixed(1)}kN(허용) = ${joistLoadRatio.toFixed(1)}%
             </span>
         </div>
         <div class="calc-item">
             <span class="calc-label">멍에 하중률:</span>
-            <span class="calc-value" style="color: ${yokeLoadRatio >= 95 ? '#ff8800' : (yokeLoadRatio >= 90 ? '#ffaa00' : '#ff8800')}">
+            <span class="calc-value" style="color: ${yokeLoadRatio >= 95 ? '#F2B705' : (yokeLoadRatio >= 90 ? '#ffaa00' : '#F2B705')}">
                 ${yokeAreaLoad.toFixed(1)}kN(실제) / ${ALLOWABLE_LOADS.yoke[currentYoke].toFixed(1)}kN(허용) = ${yokeLoadRatio.toFixed(1)}%
             </span>
         </div>
         <div class="calc-item">
             <span class="calc-label">동바리 하중률:</span>
-            <span class="calc-value" style="color: ${supportLoadRatio >= 95 ? '#ff8800' : (supportLoadRatio >= 90 ? '#ffaa00' : '#ff8800')}">
+            <span class="calc-value" style="color: ${supportLoadRatio >= 95 ? '#F2B705' : (supportLoadRatio >= 90 ? '#ffaa00' : '#F2B705')}">
                 ${supportAreaLoad.toFixed(1)}kN(실제) / ${ALLOWABLE_LOADS.support.toFixed(1)}kN(허용) = ${supportLoadRatio.toFixed(1)}%
             </span>
         </div>
@@ -7379,7 +7393,7 @@ if ((currentType === 'beam-normal' || currentType === 'beam-deck') &&
     if (riserStatus) {
         riserStatus.textContent = riserSafe ? 'OK' : 'NG';
         riserStatus.className = riserSafe ? 'status-ok' : 'status-ng';
-        riserStatus.style.color = riserSafe ? '#ff8800' : '#ff4444';
+        riserStatus.style.color = riserSafe ? '#F2B705' : '#ff4444';
     }
     
     // 하중률 정보 표시
@@ -7503,7 +7517,7 @@ if (riserNG) {
     // 자동 조정 버튼 추가 - 자동 조정 중이 아닐 때만
     if (!isAutoAdjusting) {
         const autoAdjustBtn = document.createElement('button');
-        autoAdjustBtn.style.cssText = 'background: #ff8800; color: #000; border: none; padding: 5px 15px; margin: 10px auto 0 auto; border-radius: 3px; cursor: pointer; font-weight: bold; font-size: 12px; display: block;';
+        autoAdjustBtn.style.cssText = 'background: #F2B705; color: #000; border: none; padding: 5px 15px; margin: 10px auto 0 auto; border-radius: 3px; cursor: pointer; font-weight: bold; font-size: 12px; display: block;';
         autoAdjustBtn.textContent = '🔧 자동 최적화 실행';
         
         // 상승각 NG인 경우와 일반 NG인 경우 구분
@@ -7847,7 +7861,7 @@ if (joistStatusEl) {
     if (joistSafe) {
         joistStatusEl.textContent = 'OK';
         joistStatusEl.className = 'status-ok';
-        joistStatusEl.style.color = '#ff8800';
+        joistStatusEl.style.color = '#F2B705';
         joistStatusEl.closest('tr').style.backgroundColor = '';
     } else {
         joistStatusEl.textContent = 'NG';
@@ -7863,7 +7877,7 @@ if (yokeStatusEl) {
     if (yokeSafe) {
         yokeStatusEl.textContent = 'OK';
         yokeStatusEl.className = 'status-ok';
-        yokeStatusEl.style.color = '#ff8800';
+        yokeStatusEl.style.color = '#F2B705';
         yokeStatusEl.closest('tr').style.backgroundColor = '';
     } else {
         yokeStatusEl.textContent = 'NG';
@@ -7879,7 +7893,7 @@ if (supportStatusEl) {
     if (supportSafe) {
         supportStatusEl.textContent = 'OK';
         supportStatusEl.className = 'status-ok';
-        supportStatusEl.style.color = '#ff8800';
+        supportStatusEl.style.color = '#F2B705';
         supportStatusEl.closest('tr').style.backgroundColor = '';
     } else {
         supportStatusEl.textContent = 'NG';
@@ -9474,7 +9488,7 @@ function updateStatus(type, safe) {
         
         // 스타일 직접 설정
         if (safe) {
-            statusEl.style.color = '#ff8800';
+            statusEl.style.color = '#F2B705';
             statusEl.style.fontWeight = 'bold';
         } else {
             statusEl.style.color = '#ff4444';
@@ -9963,16 +9977,16 @@ window.showStructureSummary = function() {
     saveCurrentStructure();
     
     let summaryHTML = `
-        <h2 style="color: #ff8800; text-align: center; margin-bottom: 20px;">프로젝트 구조물 목록</h2>
+        <h2 style="color: #F2B705; text-align: center; margin-bottom: 20px;">프로젝트 구조물 목록</h2>
         <p style="text-align: center; margin-bottom: 20px;">현재 프로젝트: ${structures.length}개 구조물</p>
         <table class="report-table" style="width: 100%; background: #f9f9f9;">
             <thead>
                 <tr>
-                    <th style="background: #ff8800; color: #000;">번호</th>
-                    <th style="background: #ff8800; color: #000;">구조 타입</th>
-                    <th style="background: #ff8800; color: #000;">주요 치수</th>
-                    <th style="background: #ff8800; color: #000;">멍에/동바리</th>
-                    <th style="background: #ff8800; color: #000;">작업</th>
+                    <th style="background: #F2B705; color: #000;">번호</th>
+                    <th style="background: #F2B705; color: #000;">구조 타입</th>
+                    <th style="background: #F2B705; color: #000;">주요 치수</th>
+                    <th style="background: #F2B705; color: #000;">멍에/동바리</th>
+                    <th style="background: #F2B705; color: #000;">작업</th>
                 </tr>
             </thead>
             <tbody>`;
@@ -10005,7 +10019,7 @@ window.showStructureSummary = function() {
         <td>${dimensionText}</td>
         <td style="text-align: center;">${spacingText}</td>
         <td style="text-align: center;">
-            <button onclick="window.loadStructureFromSummary(${index})" style="background: #ff8800; color: #000; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px;">편집</button>
+            <button onclick="window.loadStructureFromSummary(${index})" style="background: #F2B705; color: #000; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px;">편집</button>
         </td>
     </tr>`;
 });
@@ -10229,7 +10243,7 @@ window.generateReport = function() {
                     <th>구조물 수</th>
                     <td>${structures.length}개</td>
                     <th>작성 프로그램</th>
-                    <td>HJ구조&가설파트너 v1.00</td>
+                    <td>HJ구조기술사사무소 · 가설파트너 v1.00</td>
                 </tr>
             </table>
         </div>
@@ -10387,10 +10401,10 @@ window.generateReport = function() {
                 </table>
                 
                 <h3>5) 동적 계산 정보</h3>
-                <p style="color: #0066cc; font-weight: bold;">
+                <p style="color: #F2B705; font-weight: bold;">
                     ※ 본 계산은 타설높이 ${struct.type === 'slab' ? struct.data.thickness : struct.data.beamThickness}mm 기준으로 실시간 계산되었습니다.
                 </p>
-                <p style="color: #ff6600; font-weight: bold;">
+                <p style="color: #F2B705; font-weight: bold;">
                     ※ v1.00: 멍에/동바리 수동 설정시 장선 간격이 자동으로 최적화됩니다.
                 </p>
             </div>`;
@@ -10401,14 +10415,14 @@ window.generateReport = function() {
         <div class="report-section" style="margin-top: 50px; padding: 20px; background: #ffe6e6; border: 2px solid #ff0000;">
             <h2 style="color: #ff0000;">⚠️ 중요 고지사항</h2>
             <p style="color: #cc0000; font-weight: bold;">
-                본 보고서는 HJ구조&가설파트너 시스템 동바리 v1.00 프로그램에 의한 참고용 계산서입니다.<br>
+                본 보고서는 HJ구조기술사사무소 · 가설파트너 시스템 동바리 v1.00 프로그램에 의한 참고용 계산서입니다.<br>
                 현장 적용 시 반드시 구조기술사의 정식 검토 및 승인을 받아야 합니다.<br>
                 본 계산서를 그대로 현장에 적용하여 발생하는 모든 책임은 사용자에게 있습니다.
             </p>
         </div>
         
         <div style="text-align: center; margin-top: 40px;">
-            <p>© 2025 HJ구조&가설파트너. All rights reserved.</p>
+            <p>© ${new Date().getFullYear()} HJ구조기술사사무소 · 가설파트너. All rights reserved.</p>
             <p>문의: 010-7970-2108 | fc112@naver.com</p>
         </div>
     `;
@@ -10452,7 +10466,7 @@ window.generateReport = function() {
                         background: #ffe6e6;
                         padding: 15px;
                         margin: 20px 0;
-                        border: 2px solid #ff6600;
+                        border: 2px solid #F2B705;
                         border-radius: 5px;
                         text-align: center;
                         font-weight: bold;
@@ -10506,7 +10520,7 @@ window.generateReport = function() {
                     .print-button {
                         padding: 10px 30px;
                         font-size: 16px;
-                        background-color: #007bff;
+                        background-color: #F2B705;
                         color: white;
                         border: none;
                         border-radius: 5px;
@@ -10514,7 +10528,7 @@ window.generateReport = function() {
                         margin: 10px;
                     }
                     .print-button:hover {
-                        background-color: #0056b3;
+                        background-color: #F2B705;
                     }
                 </style>
             </head>
@@ -10522,7 +10536,7 @@ window.generateReport = function() {
                 ${reportHTML}
                 <div class="no-print" style="text-align: center; margin-top: 30px;">
                     <button class="print-button" onclick="window.print()">인쇄하기</button>
-                    <button class="print-button" style="background-color: #ff8800; color: #000; font-weight: bold; padding: 15px 40px; font-size: 18px;" onclick="if(confirm('정식 구조계산서 의뢰\\n\\n📞 010-7970-2108\\n✉️ fc112@naver.com\\n💬 카카오톡으로 문의하시겠습니까?')) { window.open('https://open.kakao.com/o/sq6cfvBh', '_blank'); }">📋 구조기술사 의뢰하기</button>
+                    <button class="print-button" style="background-color: #F2B705; color: #000; font-weight: bold; padding: 15px 40px; font-size: 18px;" onclick="if(confirm('정식 구조계산서 의뢰\\n\\n📞 010-7970-2108\\n✉️ fc112@naver.com\\n💬 카카오톡으로 문의하시겠습니까?')) { window.open('https://pf.kakao.com/_xovuVG/chat', '_blank'); }">📋 구조기술사 의뢰하기</button>
                     <button class="print-button" onclick="window.close()">창 닫기</button>
                 </div>
             </body>
@@ -10566,7 +10580,7 @@ window.sendRequestByEmail = function() {
 
 // 카카오톡으로 제출
 window.sendRequestByKakao = function() {
-    window.open('https://open.kakao.com/o/sq6cfvBh', '_blank');
+    window.open('https://pf.kakao.com/_xovuVG/chat', '_blank');
 }
 
 
@@ -10831,5 +10845,6 @@ window.resetAll = function() {
 
 
     </script>
+<script>(function(){var y=new Date().getFullYear();document.querySelectorAll('.gp-year').forEach(function(e){e.textContent=y});})();</script>
 </body>
 </html>

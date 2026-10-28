@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>시스템동바리 구조계산 사용자 매뉴얼 - HJ구조&가설파트너 v1.00</title>
+    <title>시스템 동바리 구조계산 매뉴얼 | 가설파트너</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -35,21 +35,21 @@
         }
         
         :root {
-            --primary-color: #00a652;
+            --primary-color: #F2B705;
             --primary-dark: #008a43;
             --primary-light: #e8f5ed;
-            --secondary-color: #2c3e50;
-            --text-primary: #2c3e50;
+            --secondary-color: #1B1B1B;
+            --text-primary: #1B1B1B;
             --text-secondary: #6c757d;
             --bg-primary: #ffffff;
             --bg-secondary: #f8f9fa;
             --border-color: #e9ecef;
             --warning-bg: #fff8e1;
             --warning-border: #ffc107;
-            --info-bg: #e3f2fd;
-            --info-border: #2196f3;
-            --tip-bg: #f3e5f5;
-            --tip-border: #9c27b0;
+            --info-bg: #F6F6F4;
+            --info-border: #F2B705;
+            --tip-bg: #F6F6F4;
+            --tip-border: #1B1B1B;
         }
         
         body {
@@ -63,13 +63,13 @@
         
         /* 워터마크 */
         body::before {
-            content: "© 2025 HJ구조&가설파트너";
+            content: "© HJ구조기술사사무소 · 가설파트너";
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) rotate(-45deg);
             font-size: 120px;
-            color: rgba(0, 166, 82, 0.03);
+            color: rgba(27, 27, 27, 0.03);
             z-index: -1;
             pointer-events: none;
             white-space: nowrap;
@@ -82,8 +82,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: #00a652;
-            color: white;
+            background: #F2B705;
+            color: #1B1B1B;
             padding: 20px 40px;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -103,8 +103,8 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: rgba(0, 166, 82, 0.9);
-            color: white;
+            background: rgba(242, 183, 5, 0.9);
+            color: #1B1B1B;
             padding: 15px 25px;
             border-radius: 8px;
             font-size: 14px;
@@ -133,7 +133,7 @@
         
         .header {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white;
+            color: #1B1B1B;
             padding: 60px 40px;
             text-align: center;
             position: relative;
@@ -247,7 +247,7 @@
             left: 0;
             top: 0;
             background-color: var(--primary-color);
-            color: white;
+            color: #1B1B1B;
             width: 25px;
             height: 25px;
             border-radius: 50%;
@@ -285,7 +285,7 @@
         
         th {
             background-color: var(--primary-color);
-            color: white;
+            color: #1B1B1B;
             font-weight: 500;
             font-size: 0.95em;
             letter-spacing: 0.5px;
@@ -322,7 +322,7 @@
             left: 0;
             top: 12px;
             background-color: var(--primary-color);
-            color: white;
+            color: #1B1B1B;
             width: 24px;
             height: 24px;
             border-radius: 50%;
@@ -365,7 +365,7 @@
         }
         
         .warning-box strong {
-            color: #f57c00;
+            color: #1B1B1B;
         }
         
         .info-box {
@@ -379,7 +379,7 @@
         }
         
         .info-box strong {
-            color: #1976d2;
+            color: #1B1B1B;
         }
         
         .tip-box {
@@ -393,7 +393,7 @@
         }
         
         .tip-box strong {
-            color: #7b1fa2;
+            color: #1B1B1B;
         }
         
         .code-block {
@@ -418,7 +418,7 @@
             margin: 30px 0;
             border-radius: 12px;
             text-align: center;
-            border: 1px solid rgba(0, 166, 82, 0.1);
+            border: 1px solid rgba(242, 183, 5, 0.1);
         }
         
         .contact-info p {
@@ -465,8 +465,8 @@
             position: fixed;
             bottom: 20px;
             left: 20px;
-            background: rgba(0, 166, 82, 0.9);
-            color: white;
+            background: rgba(242, 183, 5, 0.9);
+            color: #1B1B1B;
             padding: 8px 15px;
             border-radius: 5px;
             font-size: 12px;
@@ -476,13 +476,13 @@
         /* 인쇄 시 워터마크 */
         @media print {
             body::after {
-                content: "HJ구조&가설파트너 정품 문서 | 무단 복제 금지";
+                content: "HJ구조기술사사무소 · 가설파트너 정품 문서 | 무단 복제 금지";
                 position: fixed;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%) rotate(-45deg);
                 font-size: 60px;
-                color: rgba(0, 166, 82, 0.15);
+                color: rgba(27, 27, 27, 0.15);
                 z-index: 9999;
                 white-space: nowrap;
             }
@@ -510,17 +510,17 @@
             padding: 10px 20px;
             margin: 5px;
             background-color: var(--primary-color);
-            color: white;
+            color: #1B1B1B;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0, 166, 82, 0.2);
+            box-shadow: 0 2px 5px rgba(242, 183, 5, 0.2);
         }
         
         .button-example:hover {
             background-color: var(--primary-dark);
-            box-shadow: 0 4px 10px rgba(0, 166, 82, 0.3);
+            box-shadow: 0 4px 10px rgba(242, 183, 5, 0.3);
             transform: translateY(-1px);
         }
         
@@ -625,14 +625,14 @@
             const emitEvent = (state) => {
                 if (state) {
                     document.body.innerHTML = `
-                        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #00a652; color: white; font-size: 24px; text-align: center;">
+                        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #F2B705; color: #1B1B1B; font-size: 24px; text-align: center;">
                             <div>
                                 <h1>⚠️ 보안 경고</h1>
                                 <p>개발자 도구 사용이 감지되었습니다.</p>
                                 <p>본 문서는 저작권으로 보호되고 있습니다.</p>
-                                <p>© 2025 HJ구조&가설파트너</p>
+                                <p>© ${new Date().getFullYear()} HJ구조기술사사무소 · 가설파트너</p>
                                 <p style="margin-top: 20px;">
-                                    <button onclick="location.reload()" style="padding: 10px 30px; font-size: 16px; cursor: pointer; background: white; color: #00a652; border: none; border-radius: 5px;">
+                                    <button onclick="location.reload()" style="padding: 10px 30px; font-size: 16px; cursor: pointer; background: white; color: #1B1B1B; border: none; border-radius: 5px;">
                                         페이지 새로고침
                                     </button>
                                 </p>
@@ -747,10 +747,10 @@
             console.log('%c⚠️ 경고!', 'color: red; font-size: 50px; font-weight: bold;');
             console.log('%c이 문서는 저작권으로 보호됩니다.', 'color: red; font-size: 20px;');
             console.log('%c무단 복제 및 수정 시 법적 조치를 받을 수 있습니다.', 'color: red; font-size: 16px;');
-            console.log('%c© 2025 HJ구조&가설파트너. All rights reserved.', 'color: #00a652; font-size: 16px; font-weight: bold;');
+            console.log('%c© ' + new Date().getFullYear() + ' HJ구조기술사사무소 · 가설파트너. All rights reserved.', 'color: #1B1B1B; font-size: 16px; font-weight: bold;');
             
             // 타이틀 변경 방지
-            const originalTitle = '시스템동바리 구조계산 사용자 매뉴얼 - HJ구조&가설파트너 v1.00';
+            const originalTitle = '시스템동바리 구조계산 사용자 매뉴얼 - HJ구조기술사사무소 · 가설파트너 v1.00';
             setInterval(() => {
                 if (document.title !== originalTitle) {
                     document.title = originalTitle;
@@ -758,8 +758,31 @@
             }, 1000);
         })();
     </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="gp-common.css">
+<style id="gp-page">
+
+:root{--primary-dark:#D9A300;--primary-light:#FFF3C4;--secondary-color:#1B1B1B}
+body{background:#F6F6F4}
+.header{background:#1B1B1B !important;color:#fff !important}
+.header h1{color:#fff}
+.header .subtitle{color:#CFCFCF !important;opacity:1}
+.header .version{background:#F2B705 !important;color:#1B1B1B !important}
+.header::before{opacity:.07}
+h2{color:#1B1B1B !important;border-bottom-color:#F2B705 !important}
+.toc a:hover,.faq-item h4,.faq-item strong,.version-info h4{color:#1B1B1B !important}
+.contact-info{background:#FFF9E6 !important;border-color:#F2B705 !important}
+.contact-info strong{color:#1B1B1B !important}
+.contact-info a,.content a{color:#7F6000 !important;text-decoration:underline;text-underline-offset:2px}
+th{background:#1B1B1B !important;color:#fff !important}
+.copyright-badge{background:#1B1B1B !important;color:#fff !important;opacity:.85}
+@media(max-width:700px){.copyright-badge{display:none}}
+
+</style>
 </head>
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<div class="gp-topbar"><div class="gp-topbar-inner"><a href="https://gaseolpartner.com"><span class="dot"></span>가설파트너 홈페이지 ↗</a><nav><a href="https://gaseolpartner.com/pages/introduction">가설 설계 프로그램</a><a href="https://gaseolpartner.com/pages/precio">가설재 견적 비교</a><a href="https://gaseolpartner.com/pages/structureatuntroduction">구조검토</a><a href="https://gaseolpartner.com/pages/calculators">지원 서비스</a><a href="https://gaseolpartner.com/pages/support">고객지원</a></nav></div></div><header class="gp-brandbar"><div class="gp-brandbar-inner"><a class="gp-logo" href="index.html" aria-label="가설파트너"><span class="gp-li"></span><span class="gp-lt"><b>가설파트너</b><small>GASEOL PARTNER</small></span></a><div class="gp-brand-links"><a href="index.html">← 목록으로</a><a href="https://gaseolpartner.com/pages/structureatuntroduction" class="gp-cta" target="_blank" rel="noopener">정식 구조검토 의뢰</a></div></div></header>
+
     <!-- 보안 경고 -->
     <div id="securityAlert" class="security-alert"></div>
     
@@ -768,13 +791,13 @@
     
     <!-- 저작권 표시 -->
     <div class="copyright-badge">
-        © 2025 HJ구조&가설파트너
+        © <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너
     </div>
     
     <div class="container">
         <div class="header">
             <h1>시스템동바리 구조계산 사용자 매뉴얼</h1>
-            <p class="subtitle">HJ구조&가설파트너 v1.00</p>
+            <p class="subtitle">HJ구조기술사사무소 · 가설파트너 v1.00</p>
         </div>
         
         <div class="content">
@@ -903,7 +926,7 @@
                 <h3>안전성 검토</h3>
                 <ul style="list-style: none; padding: 0;">
                     <li style="padding: 10px 0;">
-                        <span style="display: inline-block; width: 60px; height: 30px; background-color: #00a652; color: white; text-align: center; line-height: 30px; border-radius: 15px; font-weight: 600; margin-right: 10px;">OK</span>
+                        <span style="display: inline-block; width: 60px; height: 30px; background-color: #F2B705; color: #1B1B1B; text-align: center; line-height: 30px; border-radius: 15px; font-weight: 600; margin-right: 10px;">OK</span>
                         구조적으로 안전
                     </li>
                     <li style="padding: 10px 0;">
@@ -1144,14 +1167,14 @@
                     <p>📞 전화: <strong>010-7970-2108</strong></p>
                     <p>✉️ 이메일: <strong>fc112@naver.com</strong></p>
                     <p>🌐 웹사이트: <a href="https://gaseolpartner.com" target="_blank">gaseolpartner.com</a></p>
-                    <p>💬 오픈카카오: <a href="https://open.kakao.com/o/sq6cfvBh" target="_blank">구조검토 문의</a></p>
+                    <p>💬 카카오톡 채널: <a href="https://pf.kakao.com/_xovuVG/chat" target="_blank">구조검토 문의</a></p>
                 </div>
                 
                 <h3>프로그램 정보</h3>
                 <ul>
                     <li><strong>버전</strong> - v1.00</li>
-                    <li><strong>개발</strong> - HJ구조&가설파트너</li>
-                    <li><strong>저작권</strong> - © 2025 HJ구조&가설파트너. All rights reserved.</li>
+                    <li><strong>개발</strong> - HJ구조기술사사무소 · 가설파트너</li>
+                    <li><strong>저작권</strong> - © <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너. All rights reserved.</li>
                 </ul>
                 
                 <h3>업데이트 내역</h3>
@@ -1172,8 +1195,9 @@
                 본 프로그램의 계산 결과는 참고용입니다.<br>
                 실제 현장 적용 시 반드시 구조기술사의 검토를 받으시기 바랍니다.
             </div>
-            <p>© 2025 HJ구조&가설파트너. All rights reserved.</p>
+            <p>© <span class="gp-year">2026</span> HJ구조기술사사무소 · 가설파트너. All rights reserved.</p>
         </div>
     </div>
+<footer class="gp-footer"><div class="gp-footer-inner"><div>회사명 : 가설파트너<span class="gp-sep">|</span>주소 : 서울 강남구 가로수길 5<span class="gp-sep">|</span>이메일 : <a href="mailto:fc112@naver.com">fc112@naver.com</a><span class="gp-sep">|</span>전화 : <a href="tel:01079702108">010-7970-2108</a><span class="gp-sep">|</span>사업자등록번호 : 549-20-01841</div><div class="gp-copyline">ⓒ <span class="gp-year">2026</span> 가설파트너 · <a href="https://gaseolpartner.com" target="_blank" rel="noopener">gaseolpartner.com</a></div></div></footer><script>(function(){var y=new Date().getFullYear();document.querySelectorAll('.gp-year').forEach(function(e){e.textContent=y});})();</script>
 </body>
 </html>
