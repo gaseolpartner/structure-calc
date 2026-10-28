@@ -1770,14 +1770,14 @@ body{height:100vh}
                 </div>
                 
                 <div style="display: flex; gap: 20px; justify-content: center; margin: 30px 0;">
-                    <button type="button" onclick="sendRequestByEmail()" style="background: #F2B705; color: #1B1B1B; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(27, 27, 27,0.3);">
+                    <button type="button" onclick="sendRequestByEmail()" style="background: #1B1B1B; color: #fff; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(27, 27, 27,0.3);">
                         <div style="font-size: 24px; margin-bottom: 5px;">✉️</div>
                         이메일로 제출
                         <div style="font-size: 12px; font-weight: normal; margin-top: 5px;">fc112@naver.com</div>
                     </button>
                     <button type="button" onclick="sendRequestByKakao()" style="background: #f9e000; color: #3c1e1e; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,224,0,0.3);">
                         <div style="font-size: 24px; margin-bottom: 5px;">💬</div>
-                        오픈카카오톡으로 제출
+                        카카오톡 채널으로 제출
                         <div style="font-size: 12px; font-weight: normal; margin-top: 5px;">실시간 상담 가능</div>
                     </button>
                 </div>
@@ -10401,10 +10401,10 @@ window.generateReport = function() {
                 </table>
                 
                 <h3>5) 동적 계산 정보</h3>
-                <p style="color: #F2B705; font-weight: bold;">
+                <p style="color: #1B1B1B; font-weight: bold;">
                     ※ 본 계산은 타설높이 ${struct.type === 'slab' ? struct.data.thickness : struct.data.beamThickness}mm 기준으로 실시간 계산되었습니다.
                 </p>
-                <p style="color: #F2B705; font-weight: bold;">
+                <p style="color: #7F6000; font-weight: bold;">
                     ※ v1.00: 멍에/동바리 수동 설정시 장선 간격이 자동으로 최적화됩니다.
                 </p>
             </div>`;
@@ -10521,7 +10521,7 @@ window.generateReport = function() {
                         padding: 10px 30px;
                         font-size: 16px;
                         background-color: #F2B705;
-                        color: white;
+                        color: #1B1B1B;
                         border: none;
                         border-radius: 5px;
                         cursor: pointer;

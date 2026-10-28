@@ -1524,14 +1524,14 @@ body{height:100vh}
                 </div>
                 
                 <div style="display: flex; gap: 20px; justify-content: center; margin: 30px 0;">
-                    <button type="button" onclick="sendRequestByEmail()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="background: #F2B705; color: #1B1B1B; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(27, 27, 27,0.3);">
+                    <button type="button" onclick="sendRequestByEmail()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="background: #1B1B1B; color: #fff; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(27, 27, 27,0.3);">
                         <div style="font-size: 24px; margin-bottom: 5px;">✉️</div>
                         이메일로 제출
                         <div style="font-size: 12px; font-weight: normal; margin-top: 5px;"><a href="mailto:fc112@naver.com" style="color:inherit">fc112@naver.com</a></div>
                     </button>
                     <button type="button" onclick="sendRequestByKakao()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="background: #f9e000; color: #3c1e1e; border: none; padding: 20px 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-align: center; transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,224,0,0.3);">
                         <div style="font-size: 24px; margin-bottom: 5px;">💬</div>
-                        오픈카카오톡으로 제출
+                        카카오톡 채널으로 제출
                         <div style="font-size: 12px; font-weight: normal; margin-top: 5px;">실시간 상담 가능</div>
                     </button>
                 </div>
@@ -2714,7 +2714,7 @@ if (typeof gtag !== 'undefined') {
             
             reportContent.innerHTML = `
                 <div class="report-header">
-                    <h1 style="font-size: 20px; color: #F2B705; margin-bottom: 5px;">HJ구조기술사사무소 · 가설파트너</h1>
+                    <h1 style="font-size: 20px; color: #7F6000; margin-bottom: 5px;">HJ구조기술사사무소 · 가설파트너</h1>
                     <h1 class="report-title">시스템 비계 보고서</h1>
                     <p>구조 검토서 및 프로그램 문의</p>
                     <p>📞 010-7970-2108 | ✉️ fc112@naver.com</p>
@@ -3025,7 +3025,7 @@ if (typeof gtag !== 'undefined') {
                         <p>실제 시공을 위한 정식 구조계산서가 아니므로 관공서 제출용으로 사용할 수 없습니다.</p>
                         <p style="background: #fff; padding: 10px; margin: 15px 0; border: 2px solid #ff0000; border-radius: 5px;">
                             정식 구조계산서가 필요하신 경우<br>
-                            <span style="color: #F2B705; font-size: 18px;">【구조기술사 의뢰하기】</span>를 통해 신청하시기 바랍니다.
+                            <span style="color: #7F6000; font-size: 18px;">【구조기술사 의뢰하기】</span>를 통해 신청하시기 바랍니다.
                         </p>
                         <button onclick="closeReport(); openRequestForm();" style="background: #F2B705; color: #000; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer; margin: 10px 0;">
                             📋 구조기술사 의뢰하기
@@ -3252,8 +3252,8 @@ ${reviewTable}
 위 채널 중 편하신 방법으로 발송해주세요.
 정식 구조계산서 작성 후 연락드리겠습니다.`);
             
-            // 오픈카카오 링크 새 창으로 열기 옵션
-            if (confirm('오픈카카오톡으로 바로 이동하시겠습니까?')) {
+            // 카카오톡 채널 링크 새 창으로 열기 옵션
+            if (confirm('카카오톡 채널으로 바로 이동하시겠습니까?')) {
                 window.open('https://pf.kakao.com/_xovuVG/chat', '_blank');
             }
             return { data, emailBody };
